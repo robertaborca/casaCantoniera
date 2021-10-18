@@ -1,0 +1,16 @@
+{
+  "name": "casa-cantoniera",
+  "version": "1.0.0",
+  "description": "sito web per il ristorante pizzeria casa cantoniera",
+  "main": "./scripts/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./sass/main.scss:./public/css/style.css -w --style compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "author": "Roberta Borca",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

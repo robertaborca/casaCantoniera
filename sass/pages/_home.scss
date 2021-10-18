@@ -1,0 +1,19 @@
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.hero {
+    background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("../../public/images/pizza-forno-a-legna.png");
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 5rem;
+    height: 100vh;
+    color: $color-white;
+
+    &__title {
+        height: max-content;
+        line-height: 2;
+        text-transform: uppercase;
+    }
+}

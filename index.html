@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="it">
+    <head>
+        <title>Casa Cantoniera &mdash; </title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- CRAWLING BOTS -->
+		<meta name="robots" content="index, follow"/>
+
+        <!-- OTTIMIZZAZIONE SEO -->
+        <meta name="description" content="Casa Cantoniera, San Mauro, Torino - Pizza e cucina che scaldano il cuore.">
+        <meta property="og:title" content="Casa Cantoniera &mdash; Il miglior ristorante pizzeria."/>
+		<meta property="og:image" content="https://unsplash.com/photos/bs2Ba7t69mM"/>
+		<meta name="keywords" content="pizza"/>
+
+        <!--GOOGLE FONTS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+
+        <!--FAVICON-->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+
+        <link rel="stylesheet" media="screen" type="text/css" href="./public/css/style.css">
+
+    </head>
+    <body>
+
+        <!--HEADER-->
+        <header>
+            <nav class="navbar" role="navigation">
+
+                <!--LOGO-->
+                <a href="index.html" class="navbar__logo navbar__logo--mobile" aria-label="Link alla Homepage" aria-current="page" role="menuitem" tabindex="0">
+                    <img src="./public/images/CasaCantoniera-logo-piccolo.png" alt="Logo della Casa Cantoniera" class="navbar__logo-img" width="100" height="100">
+                </a>
+                <!-- HAMBURGER MENU -->
+                <button 
+                    class="navbar__hamburger" 
+                    data-toggle="collapse" 
+                    data-target="#menu" 
+                    aria-controls="menu" 
+                    aria-haspopup="menu"
+                    aria-expanded="true"
+                    aria-label="Toggle Navigation"
+                    role="button"
+                    tabindex="0"
+                >
+                    <span class="navbar__hamburger--bar"></span>
+                    <span class="navbar__hamburger--bar"></span>
+                    <span class="navbar__hamburger--bar"></span>
+                </button>
+
+                <!--MENU-->
+                <ul class="navbar__menu" id="menu" role="menu" aria-label="navigation-menu">
+                    <li class="navbar__menu-item" role="none">
+                        <a href="pizza.html" class="navbar__menu-item--link no-display" role="menuitem" tabindex="0">
+                            Pizza
+                        </a>
+                    </li>
+
+                    <li class="navbar__menu-item" role="none">
+                        <a href="cucina.html" class="navbar__menu-item--link no-display" role="menuitem" tabindex="0">
+                            Cucina
+                        </a>
+                    </li>
+
+                    <li class="navbar__menu-item" role="none">
+                        <a href="vini.html" class="navbar__menu-item--link no-display" role="menuitem" tabindex="0">
+                            Carta dei Vini
+                        </a>
+                    </li>
+
+                    <li class="navbar__menu-item" role="none">
+                        <a href="index.html" class="navbar__logo navbar__menu-item--link no-display" aria-label="Link alla Homepage" aria-current="page" role="menuitem" tabindex="0">
+                            <img src="./public/images/CasaCantoniera-logo-piccolo.png" alt="Logo della Casa Cantoniera" class="navbar__logo-img">
+                        </a>
+                    </li>
+
+                    <li class="navbar__menu-item" role="none">
+                        <a href="ristorante.html" class="navbar__menu-item--link no-display" role="menuitem" tabindex="0">
+                            Il locale
+                        </a>
+                    </li>
+
+                    <li class="navbar__menu-item" role="none">
+                        <a href="posizione.html" class="navbar__menu-item--link no-display" role="menuitem" tabindex="0">
+                            Dove siamo
+                        </a>
+                    </li>
+
+                    <li class="navbar__menu-item" role="none">
+                        <a href="contatti.html" class="navbar__menu-item--link no-display" role="menuitem" tabindex="0">
+                            Contattaci
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+        <!--HEADER ENDS-->
+        <main class="main">
+
+            <article class="hero">
+                <h1 class="hero__title">Casa Cantoniera</h1>
+                <h2 class="hero__subtitle">Dove antico e moderno si incontrano.</h2>
+            </article>
+            
+        </main>
+
+        <footer class="footer">
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                <img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+            </a>
+            <br />
+            Quest'opera è distribuita con Licenza 
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                Creative Commons Attribuzione 4.0 Internazionale
+            </a>
+        </footer>
+
+
+        
+        <script src="./scripts/app.js" async defer></script>
+    </body>
+</html>

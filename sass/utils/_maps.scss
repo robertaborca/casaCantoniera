@@ -1,0 +1,19 @@
+$font-size: (
+    small: 1.3rem,
+    regular: 1.6rem,
+    medium: 1.7rem,
+    large: 2.2rem,
+    huge: 7rem
+);
+
+$font-weight: (
+    regular: 400,
+    bold: 700
+);
+
+// media queries breakpoints
+$breakpoints: (
+    tablet: 48em, // 768px
+    small-desktop: 59.375em, // 950px
+    large-desktop: 87.5em // 1400px
+);
