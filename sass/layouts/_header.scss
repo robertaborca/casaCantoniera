@@ -38,7 +38,7 @@
     // HAMBURGER MENU
     &__hamburger {
         display: none;
-        padding: 2rem;
+        padding: map-get($padding, small);
         background-color: $color-secondary;
         border: none;
         
@@ -79,13 +79,15 @@
         justify-content: space-between;
         align-items: center;
         gap: 4rem;
+        z-index: 2999999;
 
         // font
         @include media-queries-max-width(small-desktop) {
-            font-size: 1.4rem;
+            font-size: map-get($font-size, regular);
         }
+
         @include font-family("title");
-        font-size: map-get($font-size, medium);
+        font-size: map-get($font-size, large);
         letter-spacing: 1.5px;
 
         // responsive menu
@@ -94,9 +96,10 @@
             position: absolute;
             height: max-content;
             left: -100%;
-            top: -28rem;
+            top: 0;
             background-color: $color-secondary;
             width: 100%;
+            height: 100vh;
             text-align: center;
             transition: all 800ms;
             @include flex-columns;
@@ -130,6 +133,7 @@
                 transform: scale(1);
                 padding-top: .1rem;
                 position: relative;
+                letter-spacing: 2px;
 
                 &::after {
                     content: "";

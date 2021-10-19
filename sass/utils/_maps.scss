@@ -1,14 +1,25 @@
 $font-size: (
-    small: 1.3rem,
+    small: 1.4rem,
     regular: 1.6rem,
     medium: 1.7rem,
-    large: 2.2rem,
-    huge: 7rem
+    large: 2rem,
+    header1: 7rem,
+    header2: 3rem
+);
+
+$margin: (
+    small: 2rem,
+    medium: 4rem
 );
 
 $font-weight: (
     regular: 400,
     bold: 700
+);
+
+$padding: (
+    small: 2rem,
+    medium: 5rem
 );
 
 // media queries breakpoints

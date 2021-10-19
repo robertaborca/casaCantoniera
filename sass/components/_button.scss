@@ -1,0 +1,21 @@
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.btn {
+    font-size: map-get($font-size, large);
+    font-weight: map-get($font-weight, bold);
+    @include font-family("title");
+    border-radius: 2.5rem;
+    width: 25rem;
+    height: 8rem;
+    margin: map-get($margin, small);
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    text-align: center;
+    line-height: 1.2;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+}

@@ -1,7 +1,7 @@
 // fonts
 @mixin font-family($type) {
     @if $type == "title" {
-        font-family: "Josefine sans", sans-serif;
+        font-family: 'Tillana', cursive;
         font-weight: 700;
     }
     @else {

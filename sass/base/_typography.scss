@@ -7,12 +7,18 @@ body {
         font-size: map-get($font-size, regular);
         font-weight: map-get($font-weight, regular);
         text-rendering: optimizeLegibility;
-        line-height: 120%;
+        line-height: 1.4;
         letter-spacing: .6px;
         color: $color-black;
 }
 
 h1 {
         @include font-family("title");
-        font-size: map-get($font-size, huge);
+        font-size: map-get($font-size, header1);
+}
+
+h2 {
+        @include font-family("title");
+        font-size:map-get($font-size, header2);
+        letter-spacing: 1.5px;
 }
