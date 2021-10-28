@@ -2,7 +2,7 @@
 
 <html lang="it">
     <head>
-        <title>Casa Cantoniera &mdash; </title>
+        <title>Pizzeria RistoranteCasa Cantoniera &mdash; San Mauro, Torino </title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,6 +20,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Fondamento&family=Quintessential&family=Tillana:wght@400;500&display=swap" rel="stylesheet">
 
         <!--FAVICON-->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -108,8 +112,23 @@
         <main class="main">
 
             <article class="hero">
-                <h1 class="hero__title">Casa Cantoniera</h1>
-                <h2 class="hero__subtitle">Dove antico e moderno si incontrano.</h2>
+                <video class="video" aria-label="Video sfondo decorativo pizza" autoplay="1" muted id="pizzaVideo">
+                    <source src="./public/images/pizzaVideo.mp4" type="video/mp4">
+                </video>
+                <div class="hero__content">
+                    <div class="video__content">
+                        <h1 class="hero__title">La Casa Cantoniera</h1>
+                        <p class="hero__subtitle">Dove antico e moderno si incontrano.</p>
+                    </div>
+                
+<!-- BUBBLES BTN -->
+                <div class="btn-container">
+                    <button class="btn hero__button hero__button--call-to-action">Prenota un tavolo
+                        <span></span><span></span><span></span><span></span>
+                    </button>
+                    <button class="btn hero__button hero__button--explore">Esplora</button> 
+                </div>
+            </div>
             </article>
             
         </main>
