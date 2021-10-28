@@ -2,20 +2,38 @@
 @import "../utils/mixins";
 @import "../utils/variables";
 
-.btn {
+// BTN
+ .btn {
     font-size: map-get($font-size, large);
     font-weight: map-get($font-weight, bold);
     @include font-family("title");
     border-radius: 2.5rem;
     width: 25rem;
     height: 8rem;
-    margin: map-get($margin, small);
+    margin-right: map-get($margin, medium);
     text-transform: uppercase;
+
     letter-spacing: 1.4px;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.5;
     position: relative;
     overflow: hidden;
     z-index: 1;
-    transition: 0.5s;
-}
+
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 100ms linear;
+
+    &:active {
+      transform: scale(.9);
+      box-shadow: none;
+  }
+
+    @include media-queries-max-width(mobile) {
+      width: 30rem;
+      height: 10rem;
+      font-size: map-get($font-size, large);
+    }
+ }
+
+ 

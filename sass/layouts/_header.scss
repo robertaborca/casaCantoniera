@@ -11,6 +11,7 @@
     @include shadow($color-secondary);
 
     position: relative;
+    z-index: 299999;
 
     // LOGO
     &__logo {
@@ -28,6 +29,7 @@
             display: none;
             }
 
+        // MAKES MOBILE LOGO ONLY VISIBLE ON MOBILE
         &--mobile {
             @include media-queries-min-width(small-desktop) {
                  display: none;
@@ -64,6 +66,10 @@
         
             &.active .navbar__hamburger--bar:nth-child(1) {
                 transform: translateY(16px) rotate(45deg);
+
+                @include media-queries-max-width(mobile) {
+                    transform: translateY(14px) rotate(45deg);
+                }
             }
         
             &.active .navbar__hamburger--bar:nth-child(3) {
@@ -81,10 +87,6 @@
         gap: 4rem;
         z-index: 2999999;
 
-        // font
-        @include media-queries-max-width(small-desktop) {
-            font-size: map-get($font-size, regular);
-        }
 
         @include font-family("title");
         font-size: map-get($font-size, large);
@@ -111,7 +113,11 @@
             &.active {
                 left: 0;
                 top: 8.7rem;
-                padding: 3rem 0;
+                padding: 5rem 0;
+
+                @include media-queries-max-width(tablet) {
+                    top: 11rem;
+                }
             }
 
         
@@ -146,6 +152,10 @@
                     height: 2px;
                     opacity: 0;
                     transition: opacity 300ms linear;
+
+                    @include media-queries-max-width(tablet) {
+                        left: -.5rem;
+                    }
                 }
             }
 

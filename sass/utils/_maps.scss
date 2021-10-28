@@ -2,14 +2,16 @@ $font-size: (
     small: 1.4rem,
     regular: 1.6rem,
     medium: 1.7rem,
-    large: 2rem,
-    header1: 7rem,
+    large: 2.3rem,
+    header1: 6.5rem,
+    header1-mobile: 4.5rem,
     header2: 3rem
 );
 
 $margin: (
     small: 2rem,
-    medium: 4rem
+    medium: 4rem,
+    large: 6rem
 );
 
 $font-weight: (
@@ -24,6 +26,7 @@ $padding: (
 
 // media queries breakpoints
 $breakpoints: (
+    mobile: 25em, // 400px
     tablet: 48em, // 768px
     small-desktop: 59.375em, // 950px
     large-desktop: 87.5em // 1400px

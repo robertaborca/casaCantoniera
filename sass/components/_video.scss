@@ -1,0 +1,27 @@
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/animations";
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+
+    &__content {
+    color: #f1f1f1;
+    width: 100%;
+    z-index: 299999;
+
+      // MOBILE MEDIA QUERIES
+      @include media-queries-max-width(mobile) {
+        @include flex-rows;
+        gap: 2rem;
+      }
+    }
+  }

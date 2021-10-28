@@ -14,24 +14,28 @@ html {
     /*  1rem = 10px */
     font-size: 62.5%; 
     scroll-behavior: smooth;
-    width: 100vw;
     overflow-x: hidden;
+    width: 100vw;
+
+    @include media-queries-max-width(tablet) {
+        font-size: 57%;
+    };
+
+    @include media-queries-max-width(mobile) {
+        font-size: 48%;
+    };
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
     position: relative;
+    height: fit-content;
+    width: 100%;
 }
 
-// LINKS ACCESSIBILITY
+// LINKS TAB NAV ACCESSIBILITY
 a {
     text-decoration: none;
     color: $color-secondary;   
-
-    &:focus:not(:focus-visible) {
-        background: transparent;
-    }
 
     &:focus-visible,
     button {
@@ -40,12 +44,8 @@ a {
     }
 }
 
-// BUTTONS FOCUS ACCESSIBILITY
+// BUTTONS TAB NAV ACCESSIBILITY
 button {
-    &:focus:not(:focus-visible) {
-        background: transparent;
-    }
-
     &:focus-visible {
         outline: 2px dashed $color-primary-light;
         outline-offset: 1rem;

@@ -16,6 +16,11 @@
     0% {
         transform: translateX(-100%);
     }
+
+    75% {
+        transform: translateX(1%);
+    }
+
     100% {
         transform: translateX(0);
     }
@@ -26,6 +31,10 @@
     0% {
         transform: translateX(100%);
     }
+    75% {
+        transform: translateX(-1%);
+    }
+
     100% {
         transform: translateX(0);
     }
@@ -36,8 +45,14 @@
     0% {
         opacity: 0;
     }
+    25% {
+        opacity: .35;
+    }
     50% {
         opacity: .5;
+    }
+    75% {
+        opacity: .8;
     }
     100% {
         opacity: 1;

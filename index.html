@@ -112,13 +112,23 @@
         <main class="main">
 
             <article class="hero">
-                <h1 class="hero__title">La Casa Cantoniera</h1>
-                <h2 class="hero__subtitle">Dove antico e moderno si incontrano.</h2>
-
-                <button class="btn hero__button hero__button--call-to-action">Prenota un tavolo
-                    <span></span><span></span><span></span><span></span>
-                </button>
-                <button class="btn hero__button hero__button--learn-more">Esplora</button>
+                <video class="video" aria-label="Video sfondo decorativo pizza" autoplay="1" muted id="pizzaVideo">
+                    <source src="./public/images/pizzaVideo.mp4" type="video/mp4">
+                </video>
+                <div class="hero__content">
+                    <div class="video__content">
+                        <h1 class="hero__title">La Casa Cantoniera</h1>
+                        <p class="hero__subtitle">Dove antico e moderno si incontrano.</p>
+                    </div>
+                
+<!-- BUBBLES BTN -->
+                <div class="btn-container">
+                    <button class="btn hero__button hero__button--call-to-action">Prenota un tavolo
+                        <span></span><span></span><span></span><span></span>
+                    </button>
+                    <button class="btn hero__button hero__button--explore">Esplora</button> 
+                </div>
+            </div>
             </article>
             
         </main>

@@ -15,6 +15,10 @@ body {
 h1 {
         @include font-family("title");
         font-size: map-get($font-size, header1);
+
+        @include media-queries-max-width(mobile) {
+                font-size: map-get($font-size, header1-mobile);
+            };
 }
 
 h2 {
