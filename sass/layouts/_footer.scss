@@ -1,0 +1,53 @@
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/animations";
+
+.footer {
+    @include flex-rows;
+    color: rgba($color-white, .85);
+    background-color: $color-secondary;
+    margin-top: map-get($margin, medium);
+    align-items: center;
+    font-size: map-get($font-size, regular);
+
+    &__content {
+        @include flex-rows;
+        justify-content: space-evenly;
+        padding: map-get($padding, small);
+        flex-basis: 100%;
+        align-items: center;
+    }
+
+    &__info {
+        @include flex-columns;
+        gap: 2rem;
+        line-height: 1.6;
+    }
+
+    &__logo {
+        align-self: center; 
+    }
+
+    &__item {
+        i {
+            color: $color-primary;
+            font-size: map-get($font-size, large);
+            line-height: 2;
+            padding-right: map-get($padding, small);
+            height: 5rem;
+            width: 5rem;
+        }
+    }
+
+    &__license {
+        justify-self: flex-start;
+        flex-basis: 100%;
+        margin-top: map-get($margin, medium);
+        font-size: map-get($font-size, small);
+
+        a {
+            color: $color-white;
+        }
+    }
+}

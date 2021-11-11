@@ -7,11 +7,22 @@
     @include flex-rows;
     justify-content: space-around;
     align-items: center;
+    background-color: $color-secondary;
 
     @include shadow($color-secondary);
 
     position: relative;
     z-index: 299999;
+
+    &__sticky {
+        @include media-queries-min-width(small-desktop) {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba($color-secondary, .9);
+            transition: all 300ms linear;
+        };
+    }
 
     // LOGO
     &__logo {
@@ -82,14 +93,13 @@
     &__menu {
         // flex
         @include flex-rows;
-        justify-content: space-between;
         align-items: center;
         gap: 4rem;
         z-index: 2999999;
 
 
-        @include font-family("title");
-        font-size: map-get($font-size, large);
+        @include font-family("subtitle");
+        font-size: map-get($font-size, medium);
         letter-spacing: 1.5px;
 
         // responsive menu
@@ -167,11 +177,7 @@
                 }
             }
     
-        }
-
-
-    
-    background-color: $color-secondary;
+    }
 }
 
 .no-display {
