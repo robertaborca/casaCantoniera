@@ -13,16 +13,26 @@ body {
 }
 
 h1 {
-        @include font-family("title");
+        @include font-family("subtitle");
         font-size: map-get($font-size, header1);
 
         @include media-queries-max-width(mobile) {
                 font-size: map-get($font-size, header1-mobile);
-            };
+        };
 }
 
 h2 {
-        @include font-family("title");
+        @include font-family("subtitle");
         font-size:map-get($font-size, header2);
-        letter-spacing: 1.5px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+}
+
+h3 {
+        font-size: map-get($font-size, large);
+}
+
+h4 {
+        @include font-family("subtitle");
+        font-size: map-get($font-size, large);
 }

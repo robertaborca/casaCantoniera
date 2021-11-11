@@ -1,39 +1,28 @@
-// RESPONSIVE NAVBAR/SMALLER SCREENS HAMBURGER MENU
-const hamburger = document.querySelector(".navbar__hamburger");
-const navMenu = document.querySelector(".navbar__menu");
-const navLink = document.querySelectorAll(".navbar__menu-item--link");
+// DOM ELEMENTS
+const about = document.querySelector(".article__about");
+const menus = document.querySelector(".article__menus");
+const christmas = document.querySelector(".article__christmas");
+const map = document.querySelector(".article__map");
+const times = document.querySelector(".article__times");
 
-// TOGGLES MENU
-const toggleMenu = () => {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-    navLink.forEach(link => link.classList.toggle("no-display"));
-
-    // making links not clickable when menu is closed
-    if (hamburger.classList.contains("active")) {
-        navLink.forEach(link => link.tabIndex = "0");
-        
-        // accessible tab escape from menu
-        hamburger.addEventListener("keydown", event => {
-            if (event.key === "Escape") {
-                closeMenu();
-            }
-        });
-
-
-    } else {
-        navLink.forEach(link => link.tabIndex = "-1");
-    }
+// FADE IN ON SCROLL
+const fadeInOnScroll = (scrollY, element) => {
+  let y = window.scrollY;
+  if (y >= scrollY) {
+    element.classList.add("show");
+  } else {
+    element.classList.remove("show");
+  }
 };
 
-// CLOSES MENU WHEN CLICKING ON LINKS
-const closeMenu = () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-    navLink.forEach(link => link.classList.add("no-display"));
-    navLink.forEach(link => link.tabIndex = "-1");
+//EVENT LISTENERS
+window.onscroll = () => { 
+  fadeInOnScroll(800, about);
+  fadeInOnScroll(1600, menus);
+  fadeInOnScroll(2500, christmas);
+  fadeInOnScroll(3500, map);
+  fadeInOnScroll(4200, times);
+  // stickyNav();
 };
 
 
-hamburger.addEventListener("click", toggleMenu);
-navLink.forEach(n => n.addEventListener("click", closeMenu));

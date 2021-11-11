@@ -12,13 +12,22 @@
     color: $color-white;
     z-index: 1;
 
+    background-image: url("../../public/images/Untitled\ design.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: fadeIn 2000ms linear;
+
     // HERO TITLES + BUTTONS
     &__content {
         @include flex-columns;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
-        gap: 3.5rem;
-        margin-top: 15rem;
+        margin-top: map-get($margin, huge);
+        color: #f1f1f1;
+        width: 100%;
+        z-index: 299999;
 
         // MOBILE RULES
         @include media-queries-max-width(mobile) {
@@ -39,6 +48,7 @@
         transition: all 3000ms ease-in-out;
         animation: slideInLeft 3000ms ease-in-out, fadeIn 2000ms linear;
 
+        // TABLET RULES
         @include media-queries-max-width(tablet) {
             line-height: 1.5;
         };
@@ -47,13 +57,14 @@
 
     // P SUBTITLE
     &__subtitle {
-        @include font-family("title");
+        @include font-family("subtitle");
         font-size:map-get($font-size, header2);
         letter-spacing: 1.5px;
         transition: all 4000ms ease-in-out;
         animation: slideInRight 4000ms ease-out, fadeIn 3000ms linear;
     }
 
+    // HERO BTNS CONTAINER
     .btn-container {
         @include flex-rows;
         align-self: flex-start;
@@ -69,7 +80,7 @@
         margin-top: 5rem;
 
         @include media-queries-max-width(mobile) {
-            margin-top: 2.5rem;
+            margin-top: map-get($margin, small);
         }
 
         &--call-to-action {
@@ -105,10 +116,11 @@
                 }
             }
 
+            // BUBBLES
             span {
                 position: absolute;    
                 width: 25%;
-                height: 100%;
+                height: 150%;
                 background-color: $color-white;
                 transform: translateY(150%);
                 border-radius: 50%;
@@ -143,6 +155,156 @@
         }
     }
 }
+// HERO ENDS
+
+//ABOUT-MENUS
+.article {
+    min-height: 100vh;
+    @include flex-rows;
+    justify-content: space-between;
+    margin-top: map-get($margin, large);
+    padding: map-get($padding, large) 0;
+    font-size: map-get($font-size, regular);
+    
+    background-size: 60%;
+    background-repeat: no-repeat;
+    
+    opacity: 0;
+    transition: opacity 700ms linear;
+    
+    // ABOUT SECTION
+    &__about {
+        color: $color-secondary;
+        padding-left: map-get($padding, large);
+    }
+    
+    // MENUS SECTION 
+    &__menus {
+        padding-right: map-get($padding, large);
+
+        color: $color-white;
+        text-align: right;
+        background-color: $color-secondary;
+    }
+
+    // MAP SECTION
+    &__map {
+        text-align: right;
+        background-color: $color-secondary;
+        color: rgba($color-white, .8);
+        font-size: map-get($font-size, medium);
+        padding: map-get($padding, large);
+    }
+
+    // TIMES SECTION
+    &__times {
+        align-items: center;
+        font-size: map-get($font-size, large);
+        @include font-family("subtitle");
+        padding-left: map-get($padding, large);
+
+    }
+
+    // CHRISTMAS SECTION
+    &__christmas {
+        color: $color-secondary;
+        padding-left: map-get($padding, large);
+    }
+    
+    // H2s
+    &__title {
+        color: $color-primary;
+        align-self: flex-start;
+        flex-basis: 100%;
+        margin-bottom: map-get($margin, small);
+    }
+    
+    // Ps
+    &__info {
+        line-height: 1.8;
+        letter-spacing: 2px;
+        align-self: center;
+        
+        // ABOUT PARAGRAPH
+        &--about {
+            flex-basis: 40%;
+            color: rgba($color-secondary, .78);
+        }
+        
+        // MENUS PARAGRAPH
+        &--menus {
+            flex-basis: 30%;
+            color: rgba($color-white, .8);
+            background-color: rgba($color-secondary, .6);
+            justify-self: flex-end;
+        }
+
+        // TIMES PARAGRAPH
+        &--times {
+            padding: map-get($padding, small);
+            border: 1px solid $color-primary;
+            @include shadow($color-secondary);
+            flex-basis: 35%;
+        }
+
+        // CHRISTMAS PARAGRAPH
+        &--christmas {
+            flex-basis: 35%;
+            justify-self: flex-end;
+        }
+    }
+
+    // IMAGES
+    &__image {
+        @include shadow($color-secondary);
+        outline: none;
+        transition: outline 200ms linear;
+
+        &--right {
+            justify-self: flex-end;
+        }
+
+        &--left {
+            justify-self: flex-start;
+        }
+
+        &:hover {
+            outline: 1px solid $color-white;
+            outline-offset: -5rem;
+        }
+    }
+
+    // ARTICLES' LINKS
+    &__link {
+        flex-basis: 100%;
+        align-self: flex-end;
+        
+        //ABOUT LINK
+        &--about,
+        &--christmas {
+            padding-left: map-get($padding, medium);   
+        }
+        
+        // MENUS LINK
+        &--menus {
+            justify-self: flex-start;
+            padding-right: map-get($padding, huge);
+        }
+
+        // MAP LINK
+        &--map {
+            padding-right: map-get($padding, huge);
+        }
+        
+    }
+    
+}
+
+// SHOW ON SCROLL - GETS ADDED BY JS
+.show {
+    opacity: 1;
+}
+
 
 
 
