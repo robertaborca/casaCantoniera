@@ -1,0 +1,95 @@
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/animations";
+
+.contacts {
+    h1, h2 {
+        color: $color-primary;
+    }
+
+    // Title & Intro
+    &__intro {
+
+        margin-top: map-get($margin, medium);
+
+        &--paragraph {
+            font-size: map-get($font-size, medium);
+            margin-top: map-get($margin, medium);
+        }
+    }
+
+    // H2s
+    &__subtitle {
+        flex-basis: 100%;
+        margin-bottom: map-get($margin, medium);
+    }
+
+
+    // Ps
+    &__info {
+        font-size: map-get($font-size, large);   
+    }
+
+    // All Content
+    &__content {
+        @include flex-rows;
+    }
+
+    // Each Article
+    &__article {
+        flex-basis: 100%;
+        padding: map-get($padding, large);
+        @include flex-rows;
+
+    }
+
+    // Contact Cards
+    &__card {
+        @include flex-columns;
+        align-items: center;
+        justify-content: center;
+        padding: map-get($padding, small);
+        flex-basis: 25%;
+        height: 30rem;
+        width: 33rem;
+        color: $color-white;
+        font-size: map-get($font-size, header2);
+
+        &--phone {
+            background-color: $color-primary-light;
+        }
+
+        &--email {
+            background-color: $color-primary;
+        }
+
+        &--fb {
+            background-color: $color-primary-dark;
+        }
+
+        &--insta {
+            background-color: $color-secondary;
+
+        }
+
+        i {
+            padding: 5px;
+            margin-bottom: map-get($margin, medium);
+            color: $color-white;
+            transform: scale(1);
+            transition: transform 300ms ease-in-out;
+        }
+
+        &:hover i {
+            transform: scale(1.2);
+        }
+    }
+
+    // Map Article 
+    &__map {
+        justify-content: space-between;
+        align-items: center;
+
+    }
+}

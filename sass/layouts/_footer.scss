@@ -11,12 +11,30 @@
     align-items: center;
     font-size: map-get($font-size, regular);
 
+    @include media-queries-max-width(mobile) {
+        font-size: map-get($font-size, medium);
+    }
+
     &__content {
         @include flex-rows;
         justify-content: space-evenly;
-        padding: map-get($padding, small);
+        align-items: center;
+        padding: map-get($padding, medium);
         flex-basis: 100%;
         align-items: center;
+
+        @include media-queries-max-width(small-desktop) {
+            padding: map-get($padding, small);
+        }
+
+        @include media-queries-max-width(tablet) {
+            @include flex-columns;
+            justify-content: center;
+        }
+
+        @include media-queries-max-width(mobile) {
+            padding: map-get($padding, medium);
+        }
     }
 
     &__info {
@@ -27,6 +45,16 @@
 
     &__logo {
         align-self: center; 
+    }
+
+    &__nav {
+        align-items: center;
+        align-self: flex-end;
+
+        @include media-queries-max-width(tablet) {
+            align-self: center;
+            margin-top: map-get($margin, medium);
+        }
     }
 
     &__item {
@@ -50,4 +78,5 @@
             color: $color-white;
         }
     }
+
 }

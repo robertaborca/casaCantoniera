@@ -2,13 +2,9 @@
 @mixin font-family($type) {
     @if $type == "special" {
         font-family: 'Poiret One', serif;
-        font-weight: 700;
-    }
-    @if $type == "subtitle" {
-        font-family: "Poiret One", serif;
     }
     @else {
-        font-family: Montserrat, sans-serif;
+        font-family: "Montserrat", sans-serif;
     }
 }
 

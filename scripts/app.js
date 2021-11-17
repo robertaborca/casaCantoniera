@@ -17,11 +17,11 @@ const fadeInOnScroll = (scrollY, element) => {
 
 //EVENT LISTENERS
 window.onscroll = () => { 
-  fadeInOnScroll(800, about);
-  fadeInOnScroll(1600, menus);
-  fadeInOnScroll(2500, christmas);
-  fadeInOnScroll(3500, map);
-  fadeInOnScroll(4200, times);
+  fadeInOnScroll(700, about);
+  fadeInOnScroll(1400, menus);
+  fadeInOnScroll(2300, christmas);
+  fadeInOnScroll(3200, map);
+  fadeInOnScroll(3900, times);
   // stickyNav();
 };
 

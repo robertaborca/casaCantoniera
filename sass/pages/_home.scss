@@ -6,13 +6,15 @@
 // HERO
 .hero {
     position: relative;
+    @include flex-rows;
+    align-items: center;
     padding: map-get($padding, medium);
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     color: $color-white;
     z-index: 1;
 
-    background-image: url("../../public/images/Untitled\ design.png");
+    background-image: url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,18 +26,16 @@
         @include flex-columns;
         align-items: flex-start;
         justify-content: center;
-        margin-top: map-get($margin, huge);
         color: #f1f1f1;
         width: 100%;
         z-index: 299999;
 
-        // MOBILE RULES
         @include media-queries-max-width(mobile) {
             @include flex-rows;
             align-items: center;
             justify-content: center;
             gap: 2rem;
-            height: max-content;
+            min-height: max-content;
         }
     }
 
@@ -48,20 +48,25 @@
         transition: all 3000ms ease-in-out;
         animation: slideInLeft 3000ms ease-in-out, fadeIn 2000ms linear;
 
-        // TABLET RULES
-        @include media-queries-max-width(tablet) {
+        // MEDIA RULES
+        @include media-queries-max-width(small-desktop) {
             line-height: 1.5;
-        };
+        }
 
     }
 
     // P SUBTITLE
     &__subtitle {
-        @include font-family("subtitle");
+        @include font-family("special");
         font-size:map-get($font-size, header2);
         letter-spacing: 1.5px;
         transition: all 4000ms ease-in-out;
         animation: slideInRight 4000ms ease-out, fadeIn 3000ms linear;
+
+        // MEDIA RULES
+        @include media-queries-max-width(tablet) {
+            font-size: map-get($font-size, header-mobile);
+        }
     }
 
     // HERO BTNS CONTAINER
@@ -79,6 +84,7 @@
      &__button {
         margin-top: 5rem;
 
+        // MEDIA RULES
         @include media-queries-max-width(mobile) {
             margin-top: map-get($margin, small);
         }
@@ -162,12 +168,17 @@
     min-height: 100vh;
     @include flex-rows;
     justify-content: space-between;
-    margin-top: map-get($margin, large);
-    padding: map-get($padding, large) 0;
-    font-size: map-get($font-size, regular);
-    
-    background-size: 60%;
-    background-repeat: no-repeat;
+    padding: map-get($padding, large);
+
+    // MEDIA RULES
+    @include media-queries-max-width(medium-desktop) {
+        justify-content: center;
+        align-items: space-between;
+    }
+
+    @include media-queries-max-width(mobile) {
+        gap: 2.5rem;
+    }
     
     opacity: 0;
     transition: opacity 700ms linear;
@@ -194,13 +205,14 @@
         color: rgba($color-white, .8);
         font-size: map-get($font-size, medium);
         padding: map-get($padding, large);
+        justify-content: space-around;
     }
 
     // TIMES SECTION
     &__times {
         align-items: center;
         font-size: map-get($font-size, large);
-        @include font-family("subtitle");
+        @include font-family("special");
         padding-left: map-get($padding, large);
 
     }
@@ -209,6 +221,34 @@
     &__christmas {
         color: $color-secondary;
         padding-left: map-get($padding, large);
+        background-image: url("../../public/images/Cenone-Natale-Capodanno-Casa-Cantoniera-Pizzeria-Ristorante-Torino.png");
+        background-size: cover;
+        color: $color-white;
+        align-items: flex-start;
+
+        // MEDIA RULES
+        @include media-queries-max-width(small-desktop) {
+            background-image: url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Natale-Capodanno-2021.png");
+        }
+
+        @include media-queries-max-width(tablet) {
+            background-position: center;
+        }
+
+        h2 {
+            color: $color-white;
+            margin-bottom: 0;
+        }
+
+    }
+
+    // MEDIA RULES
+    @include media-queries-max-width(small-desktop) {
+        text-align: center;
+    }
+
+    @include media-queries-max-width(medium-tablet) {
+        padding: map-get($padding, medium);
     }
     
     // H2s
@@ -216,7 +256,13 @@
         color: $color-primary;
         align-self: flex-start;
         flex-basis: 100%;
-        margin-bottom: map-get($margin, small);
+        margin-bottom: map-get($margin, large);
+
+        // MEDIA RULES
+        @include media-queries-max-width(mobile) {
+            margin-bottom: map-get($margin, medium);
+            margin-top: map-get($margin, medium);
+        }
     }
     
     // Ps
@@ -224,33 +270,73 @@
         line-height: 1.8;
         letter-spacing: 2px;
         align-self: center;
+        flex-basis: 30%;
+
+        // MEDIA RULES
+        @include media-queries-max-width(medium-desktop) {
+            flex-basis: 100%;
+            text-align: justify;
+            padding: 0 map-get($padding, medium);
+        }
+
+        @include media-queries-max-width(mobile) {
+            padding: 0 map-get($padding, small);
+        }
         
         // ABOUT PARAGRAPH
         &--about {
-            flex-basis: 40%;
             color: rgba($color-secondary, .78);
+
+            // MEDIA RULES
+            @include media-queries-max-width(medium-desktop) {
+                margin-bottom: map-get($margin, medium);
+            }
         }
         
         // MENUS PARAGRAPH
         &--menus {
-            flex-basis: 30%;
             color: rgba($color-white, .8);
             background-color: rgba($color-secondary, .6);
             justify-self: flex-end;
+
+            // MEDIA RULES
+            @include media-queries-max-width(medium-desktop) {
+                margin-top: map-get($margin, medium);
+            }
+
+            @include media-queries-max-width(medium-desktop) {
+                margin-bottom: map-get($margin, small);
+            }
+        }
+
+        // MAP PARAGRAPH
+        &--map {
+            @include media-queries-max-width(medium-desktop) {
+                margin-top: map-get($margin, medium);
+            }
         }
 
         // TIMES PARAGRAPH
         &--times {
             padding: map-get($padding, small);
             border: 1px solid $color-primary;
-            @include shadow($color-secondary);
-            flex-basis: 35%;
+
+            // MEDIA RULES
+            @include media-queries-max-width(medium-desktop) {
+                margin-bottom: map-get($margin, medium);
+            }
         }
 
         // CHRISTMAS PARAGRAPH
         &--christmas {
-            flex-basis: 35%;
             justify-self: flex-end;
+            flex-basis: 60%;
+
+            // MEDIA RULES
+            @include media-queries-max-width(small-desktop) {
+                flex-basis: 80%;
+
+            }
         }
     }
 
@@ -259,6 +345,8 @@
         @include shadow($color-secondary);
         outline: none;
         transition: outline 200ms linear;
+        object-fit: cover;
+        object-position: center;
 
         &--right {
             justify-self: flex-end;
@@ -279,16 +367,29 @@
         flex-basis: 100%;
         align-self: flex-end;
         
+        // MEDIA RULES
+        @include media-queries-max-width(mobile) {
+            margin-bottom: map-get($margin, medium);
+        }
+        
         //ABOUT LINK
         &--about,
         &--christmas {
-            padding-left: map-get($padding, medium);   
+            padding-left: map-get($padding, medium);
+            text-align: left;   
+        }
+
+        &--about {
+            @include media-queries-max-width(medium-desktop) {
+                margin-top: map-get($margin, small);
+            }
         }
         
         // MENUS LINK
         &--menus {
             justify-self: flex-start;
             padding-right: map-get($padding, huge);
+            text-align: right;
         }
 
         // MAP LINK

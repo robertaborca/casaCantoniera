@@ -1,6 +1,6 @@
 .link {
     position: relative;
-    @include font-family("subtitle");
+    @include font-family("special");
     font-size: map-get($font-size, large);
 
     &:visited,
@@ -22,11 +22,30 @@
         transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
+    
+    &--mobile-order--7 {
+      @include media-queries-max-width(small-desktop) {
+          order: 7;
+          margin-top: map-get($margin, medium);
+      }
+    }
+    
+    &--mobile-order--13 {
+      @include media-queries-max-width(small-desktop) {
+          order: 13;
+          margin-top: map-get($margin, medium);
+      }
+    }
+    
+
     &--back {
       flex-basis: 100%;
       margin-left: map-get($margin, medium);
     }
-    
+
+    @include media-queries-max-width(mobile) {
+      font-size: 3rem;
+    }
   }
   
   @media (hover: hover) and (pointer: fine) {
@@ -40,5 +59,11 @@
       right: 0;
       left: auto;
       width: 100%;
+    }
+  }
+
+  .link--white {
+    &::before {
+      background-color: $color-white;
     }
   }
