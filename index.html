@@ -19,12 +19,7 @@
         <!--GOOGLE FONTS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
-
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Marcellus&family=Nanum+Myeongjo:wght@400;700&family=Philosopher:wght@400;700&family=Poiret+One&family=Vidaloka&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 <!--FONT AWESOME-->
         <script src="https://kit.fontawesome.com/fe91d29f6f.js" crossorigin="anonymous"></script>
@@ -83,7 +78,7 @@
                     
                     <li class="navbar__menu-item" role="none">
                         <a href="index.html" class="navbar__logo navbar__menu-item--link no-display" aria-label="Link alla Homepage" aria-current="page" role="menuitem" tabindex="0">
-                            <img src="public/images/CasaCantoniera-logo-transparent.png" alt="Logo della Casa Cantoniera" class="navbar__logo-img" width="100" height="100">
+                            <img src="public/images/CasaCantoniera-logo-piccolo.png" alt="Logo della Casa Cantoniera" class="navbar__logo-img" width="100" height="100">
                         </a>
                     </li>
 
@@ -113,10 +108,11 @@
                 
                 <div class="btn-container">
                     <!-- BUBBLES BTN -->
-                    <button class="btn hero__button hero__button--call-to-action">Prenota un tavolo
-                        <span></span><span></span><span></span><span></span>
-                    </button>
-                    <button class="btn hero__button hero__button--explore">Esplora</button> 
+                        <a href="contatti.html" class="btn hero__button hero__button--call-to-action">Prenota un tavolo
+                            <span></span><span></span><span></span><span></span>
+                        </a>
+                    
+                        <a href="#esplora" class="btn hero__button hero__button--explore">Esplora</a> 
                 </div>
             </div>
             </article>
@@ -124,16 +120,22 @@
 
             <!-- ABOUT -->
             <article class="article article__about">
-                    <h2 class="article__title article__title--about">Benvenuto alla Casa Cantoniera.</h2>
+                    <h2 class="article__title article__title--about" id="esplora">Benvenuto alla Casa Cantoniera.</h2>
                     <p class="article__info article__info--about">
                         Sulle rive del fiume Po, a due passi da Torino, la Casa Cantoniera ti aspetta per avvolgerti in un'atmosfera calda ed elegante, adatta a tutte le occasioni.
                         <br>
                         Nelle nostre pizze e nella nostra cucina troverete tradizione, modernità ma, soprattutto, prodotti di altissima qualità, scrupolosamente selezionati: non scendiamo mai a compromessi, quando si tratta di soddisfare le tue aspettative.
                     </p>
                     <a href="/ristorante.html">
-                        <figure class="article__figure">
-                            <img src="public/images/casaCantoniera-pizzeria-ristorante-tavolo-apparecchiato.png" alt="Tavolo apparecchiato alla Pizzeria Ristorante Casa Cantoniera" class="article__image article__image--right" width="800" height="600">
-                            <figcaption class="sr-only">Link alla pagina del Ristorante Casa Cantoniera</figcaption>
+                        <figure>
+                            <img srcset="public/images/Ristorante-Pizzeria-Casa-Cantoniera-Torino-San-Mauro-700w.png 400w,
+                                         public/images/Ristorante-Pizzeria-Casa-Cantoniera-Torino-San-Mauro-700w.png 700w"
+                                         sizes="(max-width: 600px) 400px,
+                                         700px"
+                                         src="public/images/Ristorante-Pizzeria-Casa-Cantoniera-Torino-San-Mauro-700w.png"
+                                         alt="Dettaglio del muro di mattoni e luci alla Pizzeria Ristorante Casa Cantoniera"
+                                         class="article__image article__image--right">
+                            <figcaption class="sr-only">Link alla pagina del ristorante</figcaption>
                         </figure>
                     </a>
                     
@@ -149,7 +151,13 @@
                 <h2 class="article__title article__title--menus">Sfoglia i nostri menù.</h2>
                 <a href="menu/index.html">
                     <figure class="article__figure">
-                        <img src="public/images/IMG_0471.JPG" alt="Battuta di vitello di Fassona" class="article__image article__image--left" width="800" height="600">
+                        <img srcset="public/images/Pizzeria-Ristorante-Casa-Cantoniera-battuta-di-Fassona-400w.png 400w,
+                        public/images/Pizzeria-Ristorante-Casa-Cantoniera-battuta-di-Fassona-700w.jpg 700w"
+                        sizes="(max-width: 600px) 400px,
+                        700px"
+                        src="public/images/Pizzeria-Ristorante-Casa-Cantoniera-battuta-di-Fassona-700w.jpg"
+                        alt="Battuta di vitello di Fassona alla Pizzeria Ristorante Casa Cantoniera"
+                        class="article__image article__image--left">
                         <figcaption class="sr-only">Link alla pagina dei menù</figcaption>
                     </figure>
                 </a>
@@ -175,13 +183,7 @@
                     <br>
                     Aperti sia a Natale che a Capodanno.
                 </p>
-                <a href="natale2021.html">
-                    <figure>
-                        <img src="public/images/Untitled (1000 x 667 px).png" alt="Natale e Capodanno alla Pizzeria Ristorante Casa Cantoniera" class="article__image article__image--right article__image--christmas" width="800" height="600">
-                            <figcaption class="sr-only">Link alla pagina di Natale e Capodanno</figcaption>
-                    </figure>
-                </a>
-                <a class="link link--right article__link article__link--christmas" href="natale2021.html">
+                <a class="link link--right article__link article__link--christmas link--white" href="natale2021.html">
                     Natale & Capodanno
                     <span>&#8594;</span>
                 </a>
@@ -191,7 +193,7 @@
             <!-- GOOGLE MAPS -->
             <article class="article article__map">
                 <h2 class="article__title article__title--map">Come arrivare.</h2>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2816.405951279039!2d7.757079815501279!3d45.09783826583512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478873cf2133c047%3A0x38977be6f3a0d76a!2sPizzeria%20Ristorante%20Casa%20Cantoniera!5e0!3m2!1sen!2sit!4v1636397142788!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2816.405951279039!2d7.757079815501279!3d45.09783826583512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478873cf2133c047%3A0x38977be6f3a0d76a!2sPizzeria%20Ristorante%20Casa%20Cantoniera!5e0!3m2!1sen!2sit!4v1636397142788!5m2!1sen!2sit" width="600" height="450" style="border:0;" allowfullscreen="false" loading="lazy"></iframe>
                 <p class="article__info article__info--map">
                     Pizzeria Ristorante Casa Cantoniera 
                     <br>
@@ -224,9 +226,14 @@
                     Domenica 12.30 - 14.30 & 19.30 - 22.30
                     <br>
                 </p>
-                <figure>
-                    <img src="public/images/IMG_0323.JPG" alt="Ingresso della Pizzeria Ristorante Casa Cantoniera" class="article__image article__image--right" width="800" height="600">
-                    <figcaption class="sr-only">Ingresso della Casa Cantoniera, Pizzeria e Ristorante a San Mauro</figcaption>
+                <figure class="article__figure">
+                    <img srcset="public/images/Pizzeria-Ristorante-Casa-Cantoniera-San-Mauro-Torino-400w.png 400w,
+                    public/images/Pizzeria-Ristorante-Casa-Cantoniera-San-Mauro-Torino-700w.jpg 700w"
+                    sizes="(max-width: 600px) 400px,
+                    700px"
+                    src="public/images/Pizzeria-Ristorante-Casa-Cantoniera-San-Mauro-Torino-700w.jpg"
+                    alt="Camino nella sala superiore alla Pizzeria Ristorante Casa Cantoniera"
+                    class="article__image article__image--right">
                 </figure>
             </article>
             <!-- TIMES ENDS -->
@@ -272,22 +279,22 @@
                     </li>
                     <li class="footer__item">
                         <i class="fab fa-facebook-f"></i>
-                        <a href="https://it-it.facebook.com/ristorantecasacantoniera" class="footer__link link link--right">Facebook</a>
+                        <a href="https://it-it.facebook.com/ristorantecasacantoniera" class="footer__link link link--right" target="_blank">Facebook</a>
                     </li>
                     <li class="footer__item">
                         <i class="fab fa-instagram"></i>
-                        <a href="https://www.instagram.com/casa_cantoniera/" class="footer__link link link--right">Instagram</a>
+                        <a href="https://www.instagram.com/casa_cantoniera/" class="footer__link link link--right" target="_blank">Instagram</a>
                     </li>
                 </ul>
             </div>
 
             <div class="footer__license">
-                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-                    <img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                    <img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
                 </a>
                 <br />
                 Quest'opera è distribuita con Licenza 
-                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
                     Creative Commons Attribuzione 4.0 Internazionale
                 </a>
             </div>

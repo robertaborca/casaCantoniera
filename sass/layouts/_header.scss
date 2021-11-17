@@ -98,7 +98,7 @@
         z-index: 2999999;
 
 
-        @include font-family("subtitle");
+        @include font-family("special");
         font-size: map-get($font-size, medium);
         letter-spacing: 1.5px;
 
@@ -137,6 +137,10 @@
                 @include media-queries-max-width(small-desktop) {
                     margin: 2rem 0;
                 }
+
+                @include media-queries-max-width(tablet) {
+                    font-size: map-get($font-size, large);
+                }
             }
         }
 
@@ -155,7 +159,7 @@
                     content: "";
                     position: absolute;
                     top: -1rem;
-                    left: 0;
+                    left: -.5rem;
                     background-color: $color-white;
                     line-height: 1.4;
                     width: 100%;
@@ -163,9 +167,9 @@
                     opacity: 0;
                     transition: opacity 300ms linear;
 
-                    @include media-queries-max-width(tablet) {
-                        left: -.5rem;
-                    }
+                    // @include media-queries-max-width(tablet) {
+                    //     left: -.5rem;
+                    // }
                 }
             }
 
