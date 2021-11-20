@@ -14,12 +14,16 @@
     color: $color-white;
     z-index: 1;
 
-    background-image: url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna.png");
+    background-image: url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     animation: fadeIn 2000ms linear;
+
+    @include media-queries-max-width(mobile) {
+        background-image: url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.png");
+    }
 
     // HERO TITLES + BUTTONS
     &__content {
@@ -169,16 +173,6 @@
     @include flex-rows;
     justify-content: space-between;
     padding: map-get($padding, large);
-
-    // MEDIA RULES
-    @include media-queries-max-width(medium-desktop) {
-        justify-content: center;
-        align-items: space-between;
-    }
-
-    @include media-queries-max-width(mobile) {
-        gap: 2.5rem;
-    }
     
     opacity: 0;
     transition: opacity 700ms linear;
@@ -203,7 +197,6 @@
         text-align: right;
         background-color: $color-secondary;
         color: rgba($color-white, .8);
-        font-size: map-get($font-size, medium);
         padding: map-get($padding, large);
         justify-content: space-around;
     }
@@ -221,14 +214,15 @@
     &__christmas {
         color: $color-secondary;
         padding-left: map-get($padding, large);
-        background-image: url("../../public/images/Cenone-Natale-Capodanno-Casa-Cantoniera-Pizzeria-Ristorante-Torino.png");
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Cenone-Natale-Capodanno-Casa-Cantoniera-Pizzeria-Ristorante-Torino.png");
         background-size: cover;
         color: $color-white;
         align-items: flex-start;
 
         // MEDIA RULES
         @include media-queries-max-width(small-desktop) {
-            background-image: url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Natale-Capodanno-2021.png");
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Natale-Capodanno-2021.png");
+
         }
 
         @include media-queries-max-width(tablet) {
@@ -247,8 +241,19 @@
         text-align: center;
     }
 
+    
+    @include media-queries-max-width(medium-desktop) {
+        justify-content: center;
+        align-items: space-between;
+    }
+
     @include media-queries-max-width(medium-tablet) {
         padding: map-get($padding, medium);
+    }
+
+    @include media-queries-max-width(mobile) {
+        gap: 3rem;
+        padding: map-get($padding, small);
     }
     
     // H2s
@@ -281,6 +286,7 @@
 
         @include media-queries-max-width(mobile) {
             padding: 0 map-get($padding, small);
+            text-align:left;
         }
         
         // ABOUT PARAGRAPH

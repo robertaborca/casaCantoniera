@@ -4,6 +4,12 @@
 @import "../base/animations";
 
 .contacts {
+    padding: map-get($padding, large);
+
+    @include media-queries-max-width(mobile) {
+        padding: map-get($padding, small);
+    }
+
     h1, h2 {
         color: $color-primary;
     }
@@ -15,32 +21,61 @@
 
         &--paragraph {
             font-size: map-get($font-size, medium);
-            margin-top: map-get($margin, medium);
         }
     }
 
     // H2s
     &__subtitle {
         flex-basis: 100%;
-        margin-bottom: map-get($margin, medium);
+        text-align: center;
+        margin: map-get($margin, large) 0;
     }
 
 
     // Ps
     &__info {
-        font-size: map-get($font-size, large);   
+        font-size: map-get($font-size, large);
+        padding: map-get($padding, large);
+        @include shadow($color-secondary);
+        outline: 1px solid rgba($color-primary, .7);
+        outline-offset: -1.5rem;
+
+        @include media-queries-max-width(medium-tablet) {
+            padding: 0;
+            outline: none;
+            box-shadow: none;
+        }
     }
 
     // All Content
     &__content {
         @include flex-rows;
+
+        @include media-queries-max-width(medium-tablet) {
+            @include flex-columns;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
     // Each Article
     &__article {
         flex-basis: 100%;
-        padding: map-get($padding, large);
         @include flex-rows;
+        justify-content: center;
+        align-items: center;
+        margin: map-get($margin, large) 0;
+
+        @include media-queries-max-width(tablet) {
+            margin-bottom: map-get($margin, small);
+            text-align: center;
+        }
+
+        
+        @include media-queries-max-width(medium-tablet) {
+            @include flex-columns;
+            margin-top: 0;
+        }
 
     }
 
@@ -48,13 +83,32 @@
     &__card {
         @include flex-columns;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         padding: map-get($padding, small);
-        flex-basis: 25%;
-        height: 30rem;
-        width: 33rem;
+        flex-basis: 40%;
+        // min-width: max-content;
+        // min-height: max-content;
         color: $color-white;
-        font-size: map-get($font-size, header2);
+        text-align: center;
+        border: 1px solid $color-white;
+
+        @include media-queries-max-width(medium-tablet) {
+            padding: map-get($padding, large);
+            width: 100%;
+        }
+
+        a {
+            i {
+                padding: 5px;
+                color: $color-white;
+                font-size: map-get($font-size, header2);
+                vertical-align: middle;
+                line-height: 1.2;
+                transform: scale(1);
+                transition: transform 300ms ease-in-out;
+            }
+        }
+        
 
         &--phone {
             background-color: $color-primary-light;
@@ -73,23 +127,36 @@
 
         }
 
-        i {
-            padding: 5px;
-            margin-bottom: map-get($margin, medium);
-            color: $color-white;
-            transform: scale(1);
-            transition: transform 300ms ease-in-out;
-        }
-
         &:hover i {
             transform: scale(1.2);
+        }
+
+        @include media-queries-max-width(small-tablet) {
+            margin: 0;
         }
     }
 
     // Map Article 
     &__map {
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+
+        iframe {
+            flex-basis: 100%;
+            margin-bottom: map-get($margin, medium);
+
+            @include media-queries-max-width(medium-tablet) {
+                flex-basis: 25%;
+                width: 30rem;
+                height: auto;
+            }
+
+            @include media-queries-max-width(mobile) {
+                flex-basis: 20%;
+                width: 20rem;
+                height: auto;
+            }
+        }
 
     }
 }
