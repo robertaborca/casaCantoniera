@@ -1,0 +1,56 @@
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/animations";
+
+
+.restaurant-page {
+    @include flex-rows;
+    align-items: center;
+
+
+    &__hero {
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.55) ), url("../../public/images/pizzeria-ristorante-forno-a-legna-casa-cantoniera-san-mauro-torino-desktop.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        min-height: 100vh;
+        padding: map-get($padding, large);
+        color: $color-white;
+
+        @include flex-rows;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @include media-queries-max-width(mobile) {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/pizzeria-ristorante-forno-a-legna-casa-cantoniera-san-mauro-torino-mobile.png");
+        }
+    }
+
+    &__h1 {
+        flex-basis: 30%;
+    }
+
+    &__h2 {
+        color: $color-primary;
+        margin: map-get($margin, large) 0;
+    }
+
+    &__intro {
+        flex-basis: 30%;
+        font-size: map-get($font-size, large);
+    }
+
+    &__content {
+        @include flex-rows;
+        align-items: center;
+        justify-content: center;
+
+        padding: map-get($padding, large) map-get($padding, large) 0 map-get($padding, large);
+    }
+
+    &__info {
+        margin: map-get($margin, medium) 0;
+    }
+}

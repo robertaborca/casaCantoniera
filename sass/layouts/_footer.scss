@@ -10,6 +10,7 @@
     margin-top: map-get($margin, medium);
     align-items: center;
     font-size: map-get($font-size, regular);
+    max-width: 100%;
 
     @include media-queries-max-width(mobile) {
         font-size: map-get($font-size, medium);
@@ -30,10 +31,11 @@
         @include media-queries-max-width(tablet) {
             @include flex-columns;
             justify-content: center;
+            align-items: center;
         }
 
         @include media-queries-max-width(mobile) {
-            padding: map-get($padding, medium);
+            padding: map-get($padding, small);
         }
     }
 
@@ -41,6 +43,12 @@
         @include flex-columns;
         gap: 2rem;
         line-height: 1.6;
+
+        @include media-queries-max-width(tablet) {
+            @include flex-columns;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__logo {
@@ -58,6 +66,8 @@
     }
 
     &__item {
+        @include flex-rows;
+        align-items: center;
         i {
             color: $color-primary;
             font-size: map-get($font-size, large);

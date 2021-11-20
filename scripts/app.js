@@ -1,28 +1,53 @@
 // DOM ELEMENTS
+const nav = document.querySelector(".navbar");
+const hero = document.querySelector(".hero");
 const about = document.querySelector(".article__about");
 const menus = document.querySelector(".article__menus");
 const christmas = document.querySelector(".article__christmas");
 const map = document.querySelector(".article__map");
-const times = document.querySelector(".article__times");
+const times = document.querySelector(".article__times--home");
+const elementsToFade = [about, menus, christmas, map, times];
 
-// FADE IN ON SCROLL
-const fadeInOnScroll = (scrollY, element) => {
-  let y = window.scrollY;
-  if (y >= scrollY) {
-    element.classList.add("show");
-  } else {
-    element.classList.remove("show");
+
+// GET SCROLL POINTS FOR FADING ELEMENTS
+let scrollPoints = [];
+
+const getScrollPoints = (elements) => {
+  let heights = [];
+
+  elements.forEach(element => {
+    heights.push(element.offsetHeight);
+  });
+
+  for (let i = 0; i < heights.length; i++) {
+
+    if (heights.indexOf(heights[i]) > 0) {
+      scrollPoints.push(heights[i] += heights[i - 1]);
+    } else {
+      scrollPoints.push(heights[i]);
+    }
+
   }
 };
 
-//EVENT LISTENERS
-window.onscroll = () => { 
-  fadeInOnScroll(700, about);
-  fadeInOnScroll(1400, menus);
-  fadeInOnScroll(2300, christmas);
-  fadeInOnScroll(3200, map);
-  fadeInOnScroll(3900, times);
-  // stickyNav();
+// FADE IN WHEN SCROLLPOINT IS HIGHER OR EQUAL TO WINDOW SCROLL
+const fadeInOnScroll = (element, scrollPoint) => {
+    let y = window.scrollY + element.offsetHeight / 2;
+    if (y >= scrollPoint) {
+      element.classList.add("show");
+    }
 };
+
+
+//EVENT LISTENERS
+ window.onscroll = () => { 
+  getScrollPoints(elementsToFade);
+  fadeInOnScroll(about, scrollPoints[0]);
+  fadeInOnScroll(menus, scrollPoints[1]);
+  fadeInOnScroll(christmas, scrollPoints[2]);
+  fadeInOnScroll(map, scrollPoints[3]);
+  fadeInOnScroll(times, scrollPoints[4]);
+ };
+
 
 

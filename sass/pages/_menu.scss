@@ -75,6 +75,10 @@
             clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
             filter: grayscale(100%);
         }
+        @media (hover: none) {
+            filter: grayscale(0%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);;
+        }
     }
 
     &:hover {
@@ -91,7 +95,7 @@
     }
 }
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // MENUs PAGEs
 .menu-page {
 
@@ -99,17 +103,37 @@
     justify-content: space-around;
     align-items: center;
 
+    // HERO BACKGROUNDS
     &__hero--pizza {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino.png");
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-desktop.png");
+        
+        @include media-queries-max-width(mobile) {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-mobile.png");
         }
+
+    }
     &__hero--cucina {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano.png");
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-desktop.png");
+        
+        @include media-queries-max-width(mobile) {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-mobile.png");
+        }
     }
+
     &__hero--vino {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/IMG_0500.JPG");
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-desktop.png");
+
+        @include media-queries-max-width(mobile) {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-mobile.png");
+        }
     }
+
     &__hero--birra {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/birra.png");
+        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-desktop.png");
+        
+        @include media-queries-max-width(mobile) {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-mobile.png");
+        }
     }
 
     //HERO
@@ -137,8 +161,10 @@
             padding: map-get($padding, medium);
             justify-content: flex-start;
             align-items: center;
+            margin-bottom: map-get($margin, medium);
         }
 
+        // CUCINA EDITS
         &--cucina {
             align-items: center;
 
@@ -178,39 +204,13 @@
         padding: map-get($padding, large);
         flex-basis: 45%;
 
-        &--mobile-order--1 {
-            @include media-queries-max-width(small-desktop) {
-                order: 1;
-            }
-        }
-
-        &--mobile-order--3 {
-            @include media-queries-max-width(small-desktop) {
-                order: 3;
-            }
-        }
-
-        &--mobile-order--5 {
-            @include media-queries-max-width(small-desktop) {
-                order: 5;
-            }
-        }
-
-        &--mobile-order--7 {
-            @include media-queries-max-width(small-desktop) {
-                order: 7;
-            }
-        }
-
-        &--mobile-order--9 {
-            @include media-queries-max-width(small-desktop) {
-                order: 9;
-            }
-        }
-
-        &--mobile-order--11 {
-            @include media-queries-max-width(small-desktop) {
-                order: 11;
+        // FOR LOOP TO GIVE ORDER TO FLEX ITEMS ON MOBILE
+        @for $i from 1 through 11 {
+            
+            &--mobile-order--#{$i} {
+                @include media-queries-max-width(small-desktop) {
+                    order: $i;
+                }
             }
         }
 
@@ -244,41 +244,13 @@
             @include media-queries-max-width(small-desktop) {
                 flex-basis: 100%;
             }
-    
-            &--mobile-order--2 {
-                @include media-queries-max-width(small-desktop) {
-                    order: 2;
-                }
-            }
-    
-            &--mobile-order--4 {
-                @include media-queries-max-width(small-desktop) {
-                    order: 4;
-                }
-            }
 
-            &--mobile-order--6 {
-                @include media-queries-max-width(small-desktop) {
-                    order: 6;
-                }
-            }
-
-            &--mobile-order--8 {
-                @include media-queries-max-width(small-desktop) {
-                    order: 8;
-                }
-            }
-
-            &--mobile-order--10 {
-                @include media-queries-max-width(small-desktop) {
-                    order: 10;
-                }
-            }
-
-            
-            &--mobile-order--12 {
-                @include media-queries-max-width(small-desktop) {
-                    order: 12;
+            // FOR LOOP TO GIVE ORDER TO FLEX ITEMS ON MOBILE
+            @for $i from 1 through 12 {
+                &--mobile-order--#{$i} {
+                    @include media-queries-max-width(small-desktop) {
+                        order: $i;
+                    }
                 }
             }
         }
@@ -297,6 +269,16 @@
         &__price {
             &--full-length {
                 flex-basis: 100%;;
+            }
+
+            @include media-queries-max-width(mobile) {
+                flex-basis: 100%;
+            }
+        }
+
+        &__link {
+            @include media-queries-max-width(mobile) {
+                margin-top: map-get($margin, medium);
             }
         }
 
