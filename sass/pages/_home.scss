@@ -14,7 +14,7 @@
     color: $color-white;
     z-index: 1;
 
-    background-image: url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.png");
+    background-image: url("#{$img-path}Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +22,7 @@
     animation: fadeIn 2000ms linear;
 
     @include media-queries-max-width(mobile) {
-        background-image: url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.png");
+        background-image: url("#{$img-path}Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.png");
     }
 
     // HERO TITLES + BUTTONS
@@ -214,15 +214,17 @@
     &__christmas {
         color: $color-secondary;
         padding-left: map-get($padding, large);
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Cenone-Natale-Capodanno-Casa-Cantoniera-Pizzeria-Ristorante-Torino.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Cenone-Natale-Capodanno-Casa-Cantoniera-Pizzeria-Ristorante-Torino.png");
         background-size: cover;
+        background-repeat: no-repeat;
         color: $color-white;
-        align-items: flex-start;
+        align-items: center;
 
         // MEDIA RULES
         @include media-queries-max-width(small-desktop) {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Pizzeria-Ristorante-Casa-Cantoniera-Natale-Capodanno-2021.png");
-
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Pizzeria-Ristorante-Casa-Cantoniera-Natale-Capodanno-2021.png");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
         @include media-queries-max-width(tablet) {
@@ -231,20 +233,14 @@
 
         h2 {
             color: $color-white;
-            margin-bottom: 0;
         }
 
     }
 
     // MEDIA RULES
-    @include media-queries-max-width(small-desktop) {
-        text-align: center;
-    }
-
-    
     @include media-queries-max-width(medium-desktop) {
         justify-content: center;
-        align-items: space-between;
+        text-align: center;
     }
 
     @include media-queries-max-width(medium-tablet) {
@@ -284,8 +280,11 @@
             padding: 0 map-get($padding, medium);
         }
 
+        @include media-queries-max-width(medium-tablet) {
+            padding: 0 map-get($padding, tiny);
+        }
+
         @include media-queries-max-width(mobile) {
-            padding: 0 map-get($padding, small);
             text-align:left;
         }
         
@@ -341,6 +340,12 @@
             // MEDIA RULES
             @include media-queries-max-width(small-desktop) {
                 flex-basis: 80%;
+
+            }
+
+            @include media-queries-max-width(medium-tablet) {
+                flex-basis: 100%;
+                margin-bottom: map-get($margin, medium);
 
             }
         }

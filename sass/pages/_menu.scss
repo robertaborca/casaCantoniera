@@ -70,15 +70,21 @@
             width: 35rem;
         }
 
+        @include media-queries-max-width(tablet) {
+            filter: grayscale(0%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+
+        @media (hover: none) {
+            filter: grayscale(0%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
 
         @media (hover: hover) {
             clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
             filter: grayscale(100%);
         }
-        @media (hover: none) {
-            filter: grayscale(0%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);;
-        }
+        
     }
 
     &:hover {
@@ -105,34 +111,34 @@
 
     // HERO BACKGROUNDS
     &__hero--pizza {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-desktop.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-desktop.png");
         
         @include media-queries-max-width(mobile) {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-mobile.png");
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-mobile.png");
         }
 
     }
     &__hero--cucina {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-desktop.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-desktop.png");
         
-        @include media-queries-max-width(mobile) {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-mobile.png");
+        @include media-queries-max-width(medium-tablet) {
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-mobile.png");
         }
     }
 
     &__hero--vino {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-desktop.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-desktop.png");
 
-        @include media-queries-max-width(mobile) {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-mobile.png");
+        @include media-queries-max-width(medium-tablet) {
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-mobile.png");
         }
     }
 
     &__hero--birra {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-desktop.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-desktop.png");
         
-        @include media-queries-max-width(mobile) {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-mobile.png");
+        @include media-queries-max-width(medium-tablet) {
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-mobile.png");
         }
     }
 
@@ -140,7 +146,7 @@
     &__hero {
         display: flex;
         flex-flow: nowrap;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between;
         min-height: 100vh;
         padding: map-get($padding, huge);
@@ -151,7 +157,6 @@
         background-position: center;
         
         @include media-queries-max-width(medium-desktop) {
-            align-items: center;
             padding: map-get($padding, large);
             flex-flow: wrap;
         }
@@ -159,27 +164,20 @@
         @include media-queries-max-width(tablet) {
             @include flex-columns;
             padding: map-get($padding, medium);
-            justify-content: flex-start;
-            align-items: center;
+            justify-content: center;
+            gap: 5rem;
             margin-bottom: map-get($margin, medium);
         }
 
-        // CUCINA EDITS
-        &--cucina {
-            align-items: center;
-
-            @include media-queries-max-width(tablet) {
-                justify-content: center;
-                align-items: center;
-                gap: 5rem;
-                background-position: center bottom;
-            }
+        @include media-queries-max-width(medium-tablet) {
+            padding: map-get($padding, small);
         }
 
         @include media-queries-max-width(mobile) {
             justify-content: center;
             gap: 2rem;
         }
+
     }
 
     &__title  {
@@ -218,7 +216,7 @@
             flex-basis: 80%;
         }
 
-        @include media-queries-max-width(mobile) {
+        @include media-queries-max-width(medium-tablet) {
             padding: map-get($padding, medium) map-get($padding, small);
         }
     }
