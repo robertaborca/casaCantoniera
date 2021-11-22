@@ -1,0 +1,126 @@
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/animations";
+
+.christmas-page {
+    font-family: "Tangerine", cursive;
+    font-size: 5rem;
+    @include flex-rows;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__hero {
+        width: 100vw;
+        min-height: 100vh;
+        @include flex-rows;
+        align-items: center;
+        justify-content: center;
+
+        padding: map-get($padding, large);
+
+        background: url("#{$img-path}pranzo-natale-2021-casa-cantoniera-pizzeria-ristorante-san-mauro-desktop.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include media-queries-max-width(medium-tablet) {
+            background: url("#{$img-path}pranzo-natale-2021-casa-cantoniera-pizzeria-ristorante-san-mauro-mobile.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        @include media-queries-max-width(medium-tablet) {
+            padding: map-get($padding, tiny);
+        }
+    }
+
+    &__h1, 
+    &__h2 {
+        flex-basis: 100%;
+        font-family: "Tangerine", cursive;
+        font-size: 10rem;
+        text-transform: none;
+    }
+
+    &__h2 {
+        color: $color-primary;
+    }
+
+    &__menu {
+        @include flex-rows;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+
+        padding: map-get($padding, large);
+
+        @include media-queries-max-width(medium-tablet) {
+            padding: map-get($padding, small);
+        }
+
+        @include media-queries-max-width(mobile) {
+            padding: map-get($padding, tiny);
+        }
+    }
+
+    &__menu-section {
+        @include flex-columns;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            margin: 0 auto;
+        }
+    }
+
+    &__list {
+        @include flex-columns;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+
+        hr {
+            border-top: 1rem dotted $color-primary;
+            width: 5%;
+            color: $color-white;
+            border-right: none;
+            border-left: none;
+        }
+    }
+    
+    &__price,
+    &__included {
+        flex-basis: 100%;
+        font-size: 4rem;
+    }
+
+    &__prenota {
+        margin-bottom: 4rem;
+        padding: map-get($padding, small);
+
+        @include media-queries-max-width(medium-tablet) {
+            padding: map-get($padding, tiny);
+        }
+    }
+
+    &__info {
+        @include flex-columns;
+
+        figcaption {
+            color: $color-primary;
+        }
+    }
+    
+}
+
+.divisor {
+    width: 30%;
+    color: $color-primary;
+    height: 1px;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    flex-basis: 50%;
+}

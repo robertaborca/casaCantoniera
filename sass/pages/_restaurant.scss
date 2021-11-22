@@ -7,10 +7,11 @@
 .restaurant-page {
     @include flex-rows;
     align-items: center;
+    justify-content: center;
 
 
     &__hero {
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.55) ), url("../../public/images/pizzeria-ristorante-forno-a-legna-casa-cantoniera-san-mauro-torino-desktop.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.55) ), url("#{$img-path}pizzeria-ristorante-forno-a-legna-casa-cantoniera-san-mauro-torino-desktop.png");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -21,25 +22,60 @@
 
         @include flex-rows;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
+        gap: 5rem;
+
+        @include media-queries-max-width(small-desktop) {
+            gap: 0;
+            align-items: flex-start;
+        }
+
+        @include media-queries-max-width(tablet) {
+            align-items: center;
+        }
+
+        
+        @include media-queries-max-width(medium-tablet) {
+            padding: map-get($padding, medium);
+        }
 
         @include media-queries-max-width(mobile) {
-            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../../public/images/pizzeria-ristorante-forno-a-legna-casa-cantoniera-san-mauro-torino-mobile.png");
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}pizzeria-ristorante-forno-a-legna-casa-cantoniera-san-mauro-torino-mobile.png");
+            padding: map-get($padding, large) map-get($padding, small);
+            align-items: flex-start;
         }
     }
 
     &__h1 {
         flex-basis: 30%;
+
+        @include media-queries-max-width(small-desktop) {
+            flex-basis: 100%;
+            text-align: center;
+        }
     }
 
     &__h2 {
         color: $color-primary;
         margin: map-get($margin, large) 0;
+
+        @include media-queries-max-width(small-desktop) {
+            text-align: center;
+        }
+
+        
+        @include media-queries-max-width(medium-tablet) {
+            margin-bottom: map-get($margin, small);
+        }
     }
 
     &__intro {
         flex-basis: 30%;
         font-size: map-get($font-size, large);
+
+        @include media-queries-max-width(small-desktop) {
+            flex-basis: 80%;
+        }
     }
 
     &__content {
@@ -48,9 +84,33 @@
         justify-content: center;
 
         padding: map-get($padding, large) map-get($padding, large) 0 map-get($padding, large);
+
+        @include media-queries-max-width(mobile) {
+            padding: map-get($padding, small) 0;
+        }
     }
 
     &__info {
         margin: map-get($margin, medium) 0;
+
+        @include media-queries-max-width(mobile) {
+            padding: map-get($padding, small);
+        }
+    }
+
+    
+    &__galleries {
+        @include flex-rows;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__images {
+        max-width: 400px;
+
+        @media only screen and (max-width:320px) {
+            width: 300px;
+        }
     }
 }

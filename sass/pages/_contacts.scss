@@ -6,7 +6,7 @@
 .contacts {
     padding: map-get($padding, large);
 
-    @include media-queries-max-width(mobile) {
+    @include media-queries-max-width(medium-tablet) {
         padding: map-get($padding, small);
     }
 
