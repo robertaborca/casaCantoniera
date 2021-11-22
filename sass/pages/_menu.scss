@@ -66,13 +66,9 @@
         width: 42rem;
         border-radius: 5px 10% 5px;
 
-        @include media-queries-max-width(mobile) {
-            width: 35rem;
-        }
-
-        @include media-queries-max-width(tablet) {
-            filter: grayscale(0%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        @media (hover: hover) {
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            filter: grayscale(100%);
         }
 
         @media (hover: none) {
@@ -80,11 +76,14 @@
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
 
-        @media (hover: hover) {
-            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-            filter: grayscale(100%);
+        @include media-queries-max-width(tablet) {
+            filter: grayscale(0%);
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
         
+        @include media-queries-max-width(mobile) {
+            width: 35rem;
+        }
     }
 
     &:hover {
