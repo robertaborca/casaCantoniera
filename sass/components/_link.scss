@@ -42,10 +42,6 @@
       flex-basis: 100%;
       margin-left: map-get($margin, medium);
     }
-
-    @include media-queries-max-width(mobile) {
-      font-size: 3rem;
-    }
   }
   
   @media (hover: hover) and (pointer: fine) {
