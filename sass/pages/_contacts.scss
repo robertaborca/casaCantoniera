@@ -131,7 +131,7 @@
             transform: scale(1.2);
         }
 
-        @include media-queries-max-width(small-tablet) {
+        @include media-queries-max-width(medium-tablet) {
             margin: 0;
         }
     }

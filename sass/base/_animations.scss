@@ -1,16 +1,6 @@
 @import "../utils/variables";
 
 
-// DARKEN BLACK BACKGROUND 
-@keyframes darkenBackground {
-    0% {
-        background-color: rgba($color-secondary, 0);
-    }
-    100% {
-        background-color: rgba($color-secondary, .5);
-    }
-}
-
 // SLIDE IN RIGHT TO LEFT
 @keyframes slideInRight {
     0% {
@@ -58,3 +48,4 @@
         opacity: 1;
     }
 }
+
