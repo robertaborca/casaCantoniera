@@ -14,7 +14,7 @@
     color: $color-white;
     z-index: 1;
 
-    background-image: url("#{$img-path}Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.png");
+    background-image: url("#{$img-path}Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +22,7 @@
     animation: fadeIn 2000ms linear;
 
     @include media-queries-max-width(mobile) {
-        background-image: url("#{$img-path}Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.png");
+        background-image: url("#{$img-path}Pizzeria-Ristorante-Casa-Cantoniera-Torino-Forno-a-legna-desktop.webp");
     }
 
     // HERO TITLES + BUTTONS
@@ -214,7 +214,7 @@
     &__christmas {
         color: $color-secondary;
         padding-left: map-get($padding, large);
-        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Cenone-Natale-Capodanno-Casa-Cantoniera-Pizzeria-Ristorante-Torino.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Cenone-Natale-Capodanno-Casa-Cantoniera-Pizzeria-Ristorante-Torino.webp");
         background-size: cover;
         background-repeat: no-repeat;
         color: $color-white;
@@ -222,7 +222,7 @@
 
         // MEDIA RULES
         @include media-queries-max-width(small-desktop) {
-            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Pizzeria-Ristorante-Casa-Cantoniera-Natale-Capodanno-2021.png");
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Pizzeria-Ristorante-Casa-Cantoniera-Natale-Capodanno-2021.webp");
             background-size: cover;
             background-repeat: no-repeat;
         }

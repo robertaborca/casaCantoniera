@@ -6,7 +6,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="theme-color" content="#a80f02">
+       
         <!-- CRAWLING BOTS -->
 		<meta name="robots" content="index, follow"/>
 
@@ -15,6 +16,7 @@
         <meta property="og:title" content="Cucina - Casa Cantoniera, San Mauro, Torino"/>
 		<meta property="og:image" content="../public/images/IMG_0377.jpg"/>
 		<meta name="keywords" content="pizza"/>
+        <link rel="canonical" href="https://www.casacantoniera.it"/>
 
         <!--GOOGLE FONTS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,7 +31,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
+        <link rel="manifest" href="/manifest.JSON">
 
         <link rel="stylesheet" media="screen" type="text/css" href="../public/css/style.css">
 
@@ -38,11 +40,11 @@
 
         <!--HEADER-->
         <header>
-            <nav class="navbar" role="navigation">
+            <nav class="navbar" role="menu">
 
                 <!--LOGO-->
                 <a href="../index.html" class="navbar__logo navbar__logo--mobile" aria-label="Link alla Homepage" role="menuitem" tabindex="0">
-                    <img src="../public/images/CasaCantoniera-logo-piccolo.png" alt="Logo della Casa Cantoniera" class="navbar__logo-img" width="100" height="100">
+                    <img src="../public/images/CasaCantoniera-logo-piccolo.webp" alt="Logo della Casa Cantoniera" class="navbar__logo-img" width="100" height="100">
                 </a>
                 <!-- HAMBURGER MENU -->
                 <button 
@@ -53,7 +55,7 @@
                     aria-haspopup="menu"
                     aria-expanded="true"
                     aria-label="Toggle Navigation"
-                    role="button"
+                    
                     tabindex="0"
                 >
                     <span class="navbar__hamburger--bar"></span>
@@ -78,7 +80,7 @@
                     
                     <li class="navbar__menu-item" role="none">
                         <a href="../index.html" class="navbar__logo navbar__menu-item--link no-display" aria-label="Link alla Homepage" role="menuitem" tabindex="0">
-                            <img src="../public/images/CasaCantoniera-logo-piccolo.png" alt="Logo della Casa Cantoniera" class="navbar__logo-img" width="100" height="100">
+                            <img src="../public/images/CasaCantoniera-logo-piccolo.webp" alt="Logo della Casa Cantoniera" class="navbar__logo-img" width="100" height="100">
                         </a>
                     </li>
 
@@ -153,18 +155,18 @@
 
 
         <!-- GALLERY antipasti-->
-            <article class="menu-page__images menu-page__images--mobile-order--2">
-                <img src="../public/images/cheesecake-di-salmone-casa-cantoniera-ristorante-antipasti.png" alt="La Cheesecake di Salmone della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-                <img src="../public/images/battuta-di-vitello-di-fassona-ristorante-casa-cantoniera.png" alt="La Battuta di Vitello di Fassona della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-                <img src="../public/images/polpo-marinato-ristorante-casa-cantoniera-pesce.png" alt="Il Polpo Marinato della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-                <img src="../public/images/Vitello-tonnato-al-punto-rosa-ristorante-casa-cantoniera.png" alt="Il Vitello Tonnato della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+            <article aria-label="Galleria di Immagini piatti" class="menu-page__images menu-page__images--mobile-order--2">
+                <img src="../public/images/cheesecake-di-salmone-casa-cantoniera-ristorante-antipasti.webp" alt="La Cheesecake di Salmone della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+                <img src="../public/images/battuta-di-vitello-di-fassona-ristorante-casa-cantoniera.webp" alt="La Battuta di Vitello di Fassona della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+                <img src="../public/images/polpo-marinato-ristorante-casa-cantoniera-pesce.webp" alt="Il Polpo Marinato della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+                <img src="../public/images/Vitello-tonnato-al-punto-rosa-ristorante-casa-cantoniera.webp" alt="Il Vitello Tonnato della Casa Cantoniera" class="menu-page__image" width="400" height="300">
             </article>
 
         <!-- GALLERY Primi -->
-            <article class="menu-page__images menu-page__images--mobile-order--4">
-                <img src="../public/images/Primi-di-pesce-e-di-terra-con-gamberi-ristorante-casa-cantoniera.png" alt="Gli Gnocchi con pesto di pistacchi e gamberi della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-                <img src="../public/images/I-primi-della-Casa-Cantoniera-ristorante-torino-san-mauro.png" alt="I Pomodorini gialli Lucariello dell’Agro Nocerino Sarnese della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-                <img src="../public/images/Primi-del-ristorante-casa-cantoniera-san-mauro.png" alt="Gli Anolini di Borraggine della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+            <article aria-label="Galleria di Immagini piatti" class="menu-page__images menu-page__images--mobile-order--4">
+                <img src="../public/images/Primi-di-pesce-e-di-terra-con-gamberi-ristorante-casa-cantoniera.webp" alt="Gli Gnocchi con pesto di pistacchi e gamberi della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+                <img src="../public/images/I-primi-della-Casa-Cantoniera-ristorante-torino-san-mauro.webp" alt="I Pomodorini gialli Lucariello dell’Agro Nocerino Sarnese della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+                <img src="../public/images/Primi-del-ristorante-casa-cantoniera-san-mauro.webp" alt="Gli Anolini di Borraggine della Casa Cantoniera" class="menu-page__image" width="400" height="300">
             </article>
 
         <!-- MENU Primi STARTS -->
@@ -231,17 +233,17 @@
         <!-- MENU secondi ENDS -->
 
         <!--  GALLERY secondi -->
-        <article class="menu-page__images menu-page__images--mobile-order--6">
-            <img src="../public/images/Tagliata-di-vitello-di-Fassona-ristorante-casa-cantoniera-san-mauro-torino.png" alt="La Tagliata di Fassona della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-            <img src="../public/images/tonno-scottato-ristorante-casa-cantoniera-torino.png" alt="Il Tonno Scottato della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-            <img src="../public/images/frittura-di-pesce-casa-cantoniera-ristorante-torino.png" alt="La Frittura di Pesce della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+        <article aria-label="Galleria di Immagini piatti" class="menu-page__images menu-page__images--mobile-order--6">
+            <img src="../public/images/Tagliata-di-vitello-di-Fassona-ristorante-casa-cantoniera-san-mauro-torino.webp" alt="La Tagliata di Fassona della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+            <img src="../public/images/tonno-scottato-ristorante-casa-cantoniera-torino.webp" alt="Il Tonno Scottato della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+            <img src="../public/images/frittura-di-pesce-casa-cantoniera-ristorante-torino.webp" alt="La Frittura di Pesce della Casa Cantoniera" class="menu-page__image" width="400" height="300">
         </article>
 
         <!-- GALLERY Hamburger -->
-        <article class="menu-page__images menu-page__images--mobile-order--8">
-            <img src="../public/images/ristorante-casa-cantoniera-hamburger-carne.png" alt="Hamburger della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-            <img src="../public/images/hamburger-fassona-con-fonduta-ristorante-casa-cantoniera-carne.png" alt="Hamburger di Fassona della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-            <img src="../public/images/hamburger-pata-negra-con-bacon-croccante-casa-cantoniera-carne.png" alt="Hamburger di Pata Negra della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+        <article aria-label="Galleria di Immagini piatti" class="menu-page__images menu-page__images--mobile-order--8">
+            <img src="../public/images/ristorante-casa-cantoniera-hamburger-carne.webp" alt="Hamburger della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+            <img src="../public/images/hamburger-fassona-con-fonduta-ristorante-casa-cantoniera-carne.webp" alt="Hamburger di Fassona della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+            <img src="../public/images/hamburger-pata-negra-con-bacon-croccante-casa-cantoniera-carne.webp" alt="Hamburger di Pata Negra della Casa Cantoniera" class="menu-page__image" width="400" height="300">
         </article>
 
         <!-- MENU Hamburger STARTS -->
@@ -310,14 +312,14 @@
     <!-- MENU Fritti ENDS -->
 
     <!--  GALLERY Fritti -->
-    <article class="menu-page__images menu-page__images--mobile-order--10">
-        <img src="../public/images/I-fritti-del-ristorante-casa-cantoniera-mozzarella-in-carrozza.png" alt="La Mozzarella in Carrozza della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+    <article aria-label="Galleria di Immagini piatti" class="menu-page__images menu-page__images--mobile-order--10">
+        <img src="../public/images/I-fritti-del-ristorante-casa-cantoniera-mozzarella-in-carrozza.webp" alt="La Mozzarella in Carrozza della Casa Cantoniera" class="menu-page__image" width="400" height="300">
     </article>
 
         <!-- GALLERY Contorni -->
-        <article class="menu-page__images menu-page__images--mobile-order--12">
-            <img src="../public/images/i-contorni-della-casa-cantoniera-patate-al-forno.png" alt="Le Patate al forno della Casa Cantoniera" class="menu-page__image" width="400" height="300">
-            <img src="../public/images/verdure-saltate-in-padella-casa-cantoniera-san-mauro-torino.png" alt="Le Verdure Saltate della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+        <article aria-label="Galleria di Immagini piatti" class="menu-page__images menu-page__images--mobile-order--12">
+            <img src="../public/images/i-contorni-della-casa-cantoniera-patate-al-forno.webp" alt="Le Patate al forno della Casa Cantoniera" class="menu-page__image" width="400" height="300">
+            <img src="../public/images/verdure-saltate-in-padella-casa-cantoniera-san-mauro-torino.webp" alt="Le Verdure Saltate della Casa Cantoniera" class="menu-page__image" width="400" height="300">
         </article>
 
         <!-- MENU Contorni STARTS -->
@@ -357,6 +359,11 @@
     <!-- MENU Contorni ENDS -->
         <a href="index.html" class="link link--left link--back menu-page__link link--mobile-order--13">Indietro <span>&#8594;</span></a>
 
+        <!-- BACK TO TOP -->
+        <a class="top-link hide" href="" id="js-top">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+            <span class="screen-reader-text">Back to top</span>
+          </a>
 
         </main>
 
@@ -365,9 +372,9 @@
             <div class="footer__content">
                 <div class="footer__info">
                     <a href="../index.html" class="footer__logo" aria-label="Link alla Homepage">
-                        <img src="../public/images/CasaCantoniera-logo-piccolo.png" alt="Logo della Casa Cantoniera" class="footer__image" width="100" height="100">
+                        <img src="../public/images/CasaCantoniera-logo-piccolo.webp" alt="Logo della Casa Cantoniera" class="footer__image" width="100" height="100">
                     </a>
-                    <h4 class="footer__title">Pizzeria Ristorante la Casa Cantoniera</h4>
+                    <p class="footer__title">Pizzeria Ristorante la Casa Cantoniera</p>
                     <p class="footer__address">Via Torino, 2, 10099 San Mauro Torinese &mdash; Torino</p>
                     <p class="footer__times">
                         Lunedì chiuso
@@ -397,22 +404,22 @@
                     </li>
                     <li class="footer__item">
                         <i class="fab fa-facebook-f"></i>
-                        <a href="https://it-it.facebook.com/ristorantecasacantoniera" class="footer__link link link--right" target="_blank">Facebook</a>
+                        <a href="https://it-it.facebook.com/ristorantecasacantoniera" class="footer__link link link--right" target="_blank" rel="noreferrer">Facebook</a>
                     </li>
                     <li class="footer__item">
                         <i class="fab fa-instagram"></i>
-                        <a href="https://www.instagram.com/casa_cantoniera/" class="footer__link link link--right" target="_blank">Instagram</a>
+                        <a href="https://www.instagram.com/casa_cantoniera/" class="footer__link link link--right" target="_blank" rel="noreferrer">Instagram</a>
                     </li>
                 </ul>
             </div>
 
             <div class="footer__license">
-                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
-                    <img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                <a rel="license noreferrer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                    <img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" width="83" height="31"/>
                 </a>
                 <br />
                 Quest'opera è distribuita con Licenza 
-                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
+                <a rel="license noreferrer" href="http://creativecommons.org/licenses/by/4.0/" target="_blank">
                     Creative Commons Attribuzione 4.0 Internazionale
                 </a>
             </div>
@@ -422,6 +429,6 @@
 
 
         
-        <script src="../scripts/nav.js" async defer></script>
+        <script src="../scripts/nav-min.js" async defer></script>
     </body>
 </html>

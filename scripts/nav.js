@@ -5,6 +5,10 @@ const navLink = document.querySelectorAll(".navbar__menu-item--link");
 const navbar = document.querySelector(".navbar");
 const main = document.querySelector(".main");
 
+// SCROLL TO TOP BTN
+const scrollToTopButton = document.getElementById('js-top');
+
+
 
 // RESPONSIVE NAVBAR/SMALLER SCREENS HAMBURGER MENU
 // TOGGLES MENU
@@ -38,26 +42,45 @@ const closeMenu = () => {
     navLink.forEach(link => link.tabIndex = "-1");
 };
 
-// // STICKY TRANSPARENT NAV ON SCROLLING
-// // Get the offset position of the navbar
-// let navbarHeight = navbar.offsetHeight;
 
-// // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// const stickyNav = () => {
-//   if (window.pageYOffset >= navbarHeight && window.innerWidth > 950) {
-//     navbar.classList.add("navbar__sticky");
-//     main.style.padding = "10rem 0 0 0"; 
-//   } else {
-//     navbar.classList.remove("navbar__sticky");
-//     main.style.padding = "0"; 
-//   }
-// }
 
+//////////////////////////////////////////////////////
+// GETS CURRENT SCROLL VALUE AND CHANGES CLASS OF BACK-TO-TOP BTN TO SHOW/HIDE
+const scrollFunc = () => {
+    // Get the current scroll value
+    let y = window.scrollY;
+    // If the scroll value is greater than the window height, add class to the scroll-to-top button to show it
+    if (y > 0) {
+      scrollToTopButton.className = "top-link show";
+    } else {
+      scrollToTopButton.className = "top-link hide";
+    }
+  };
+
+////////////////
+// SCROLLS BACK TO TOP
+  const scrollToTop = () => {
+    // number of pixels we are from the top of the document.
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    // If number > 0, scroll back to 0, or the top of the document.
+    if (c > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      // ScrollTo takes an x and a y coordinate.
+      // Increase the '10' value to get a smoother/slower scroll!
+      window.scrollTo(0, c - c / 10);
+    }
+  };
 
 //EVENT LISTENERS
 hamburger.addEventListener("click", toggleMenu);
 navLink.forEach(n => n.addEventListener("click", closeMenu));
 
-// window.onscroll = () => { 
-//     stickyNav();
-//   };
+window.addEventListener("scroll", scrollFunc);
+
+// When the button is clicked, run our ScrolltoTop function above!
+scrollToTopButton.onclick = function(e) {
+    e.preventDefault();
+    scrollToTop();
+  }
+
+

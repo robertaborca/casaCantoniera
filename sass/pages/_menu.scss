@@ -110,34 +110,34 @@
 
     // HERO BACKGROUNDS
     &__hero--pizza {
-        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-desktop.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-desktop.webp");
         
         @include media-queries-max-width(mobile) {
-            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-mobile.png");
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Pizza-Napoletana-Parmigiana-Casa-Cantoniera-Torino-mobile.webp");
         }
 
     }
     &__hero--cucina {
-        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-desktop.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-desktop.webp");
         
         @include media-queries-max-width(medium-tablet) {
-            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-mobile.png");
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}ristorante-casa-cantoniera-tonno-scottato-pesce-carne-vegetariano-mobile.webp");
         }
     }
 
     &__hero--vino {
-        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-desktop.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-desktop.webp");
 
         @include media-queries-max-width(medium-tablet) {
-            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-mobile.png");
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}Vini-rossi-piemontesi-vini-bianchi-ristorante-casa-cantoniera-torino-mobile.webp");
         }
     }
 
     &__hero--birra {
-        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-desktop.png");
+        background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-desktop.webp");
         
         @include media-queries-max-width(medium-tablet) {
-            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-mobile.png");
+            background: linear-gradient( rgba($color-secondary, 0.5), rgba($color-secondary, 0.5) ), url("#{$img-path}birra-artigianale-italiana-casa-cantoniera-ristorante-pizzeria-san-mauro-torino-mobile.webp");
         }
     }
 

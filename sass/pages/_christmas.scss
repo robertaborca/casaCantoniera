@@ -20,12 +20,12 @@
 
         padding: map-get($padding, large);
 
-        background: url("#{$img-path}pranzo-natale-2021-casa-cantoniera-pizzeria-ristorante-san-mauro-desktop.png");
+        background: url("#{$img-path}pranzo-natale-2021-casa-cantoniera-pizzeria-ristorante-san-mauro-desktop.webp");
         background-size: cover;
         background-repeat: no-repeat;
 
         @include media-queries-max-width(medium-tablet) {
-            background: url("#{$img-path}pranzo-natale-2021-casa-cantoniera-pizzeria-ristorante-san-mauro-mobile.png");
+            background: url("#{$img-path}pranzo-natale-2021-casa-cantoniera-pizzeria-ristorante-san-mauro-mobile.webp");
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -83,8 +83,10 @@
         gap: 2.5rem;
 
         hr {
-            border-top: 1rem dotted $color-primary;
-            width: 5%;
+            border-top: .8rem dotted $color-primary;
+            width: 5rem;
+            text-align: center;
+            margin: 0 auto;
             color: $color-white;
             border-right: none;
             border-left: none;
