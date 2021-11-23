@@ -46,6 +46,7 @@
     @include media-queries-max-width(mobile) {
       font-size: 4rem;
     }
+    
   }
   
   @media (hover: hover) and (pointer: fine) {
@@ -67,7 +68,6 @@
       background-color: $color-white;
     }
   }
-
 
   // BACK TO TOP LINK
   .top-link {
