@@ -6,8 +6,12 @@
 .contacts {
     padding: map-get($padding, large);
 
+    @include flex-columns;
+    align-content: center;
+    justify-content: center;
+
     @include media-queries-max-width(medium-tablet) {
-        padding: map-get($padding, small);
+        padding: map-get($padding, medium);
     }
 
     h1, h2 {
@@ -49,13 +53,9 @@
 
     // All Content
     &__content {
-        @include flex-rows;
-
-        @include media-queries-max-width(medium-tablet) {
-            @include flex-columns;
-            align-items: center;
-            justify-content: center;
-        }
+        @include flex-columns;
+        align-items: center;
+        justify-content: center;
     }
 
     // Each Article

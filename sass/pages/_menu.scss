@@ -81,8 +81,9 @@
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
         }
         
-        @include media-queries-max-width(mobile) {
-            width: 35rem;
+        @include media-queries-max-width(medium-tablet) {
+            width: 30rem;
+            height: auto;
         }
     }
 
