@@ -64,10 +64,12 @@ const scrollFunc = () => {
     const c = document.documentElement.scrollTop || document.body.scrollTop;
     // If number > 0, scroll back to 0, or the top of the document.
     if (c > 0) {
-      window.requestAnimationFrame(scrollToTop);
-      // ScrollTo takes an x and a y coordinate.
-      // Increase the '10' value to get a smoother/slower scroll!
-      window.scrollTo(0, c - c / 10);
+      //  window.requestAnimationFrame(scrollToTop);
+      window.scrollTo({
+        top: c - c * 8,
+        left: 0,
+        behavior: 'smooth'
+      });
     }
   };
 
