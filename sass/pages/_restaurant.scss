@@ -86,11 +86,7 @@
         padding: map-get($padding, large) map-get($padding, large) 0 map-get($padding, large);
 
         @include media-queries-max-width(medium-tablet) {
-            padding: map-get($padding, medium);
-        }
-
-        @include media-queries-max-width(mobile) {
-            padding: map-get($padding, small) 0;
+            padding: map-get($padding, tiny);
         }
     }
 
