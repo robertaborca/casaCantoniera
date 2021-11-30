@@ -1,0 +1,30 @@
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.gallery {
+    @include flex-rows;
+    padding: map-get($padding, medium);
+    justify-content: center;
+    gap: 2rem;
+
+    opacity: 0;
+    transition: opacity 700ms linear;
+
+    &__title {
+        flex-basis: 100%;
+        color: $color-primary;
+        text-align: center;
+    }
+
+    img {
+        transition: all 300ms ease-in-out;
+    }
+
+    img:hover {
+        filter: sepia(60%);
+    }
+
+
+
+}

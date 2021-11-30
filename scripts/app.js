@@ -6,7 +6,9 @@ const menus = document.querySelector(".article__menus");
 const christmas = document.querySelector(".article__christmas");
 const map = document.querySelector(".article__map");
 const times = document.querySelector(".article__times--home");
-const elementsToFade = [about, menus, christmas, map, times];
+const gallery = document.querySelector(".gallery");
+
+const elementsToFade = [about, menus, christmas, map, times, gallery];
 
 
 // GET SCROLL POINTS FOR FADING ELEMENTS
@@ -47,6 +49,7 @@ const fadeInOnScroll = (element, scrollPoint) => {
   fadeInOnScroll(christmas, scrollPoints[2]);
   fadeInOnScroll(map, scrollPoints[3]);
   fadeInOnScroll(times, scrollPoints[4]);
+  fadeInOnScroll(gallery, scrollPoints[5]);
  };
 
 
