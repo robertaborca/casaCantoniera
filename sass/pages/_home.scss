@@ -195,10 +195,14 @@
     // MAP SECTION
     &__map {
         text-align: right;
-        background-color: $color-secondary;
+        background-color: $color-primary-dark;
         color: rgba($color-white, .8);
         padding: map-get($padding, large);
         justify-content: space-around;
+
+        h2 {
+            color: $color-white;
+        }
     }
 
     // TIMES SECTION

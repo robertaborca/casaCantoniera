@@ -202,7 +202,7 @@
         flex-basis: 45%;
 
         // FOR LOOP TO GIVE ORDER TO FLEX ITEMS ON MOBILE
-        @for $i from 1 through 11 {
+        @for $i from 1 through 13 {
             
             &--mobile-order--#{$i} {
                 @include media-queries-max-width(small-desktop) {
@@ -243,7 +243,7 @@
             }
 
             // FOR LOOP TO GIVE ORDER TO FLEX ITEMS ON MOBILE
-            @for $i from 1 through 12 {
+            @for $i from 1 through 13 {
                 &--mobile-order--#{$i} {
                     @include media-queries-max-width(small-desktop) {
                         order: $i;

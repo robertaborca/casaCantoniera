@@ -90,3 +90,14 @@
     }
 
 }
+
+.sovvenzioni-ricevute a:link,
+.sovvenzioni-ricevute a:visited,
+.sovvenzioni-ricevute a:hover,
+.sovvenzioni-ricevute a:active {
+    color: $color-white;
+    margin-left: 3rem;
+    text-decoration: underline;
+}
+
+
