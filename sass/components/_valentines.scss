@@ -1,0 +1,19 @@
+@import "../utils/maps";
+@import "../utils/mixins";
+@import "../utils/variables";
+@import "../base/animations";
+
+.article__valentines {
+    background-image: linear-gradient(45deg, rgba(255,255,255,.6), rgba(255,255,255,.6)), url("../images/ristorante-san-valentino.webp");
+    background-size: cover;
+    background-position: right;
+    align-items: space-evenly;
+}
+
+.article__title--valentines {
+    flex-basis: 60%;
+}
+
+.article__info--valentine {
+    flex-basis: 60%;
+}
