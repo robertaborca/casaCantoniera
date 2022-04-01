@@ -4,8 +4,8 @@
 @import "../base/animations";
 
 .christmas-page {
-    font-family: "Tangerine", cursive;
-    font-size: 5rem;
+    @include font-family("body");
+    font-size: 2.5rem;
     @include flex-rows;
     justify-content: center;
     align-items: center;
@@ -13,21 +13,23 @@
 
     &__hero {
         width: 100vw;
-        min-height: 100vh;
+        height: 75vh;
         @include flex-rows;
         align-items: center;
         justify-content: center;
 
         padding: map-get($padding, large);
 
-        background: url("#{$img-path}pranzo-natale-2021-casa-cantoniera-pizzeria-ristorante-san-mauro-desktop.webp");
+        background: url("#{$img-path}pasqua22_casa-cantoniera.webp");
         background-size: cover;
         background-repeat: no-repeat;
 
         @include media-queries-max-width(medium-tablet) {
-            background: url("#{$img-path}pranzo-natale-2021-casa-cantoniera-pizzeria-ristorante-san-mauro-mobile.webp");
+            background-image: linear-gradient(to bottom, rgba(255,255,255,.6), rgba(255,255,255,.6)),
+            url("#{$img-path}pasqua22_casa-cantoniera--mobile.webp");
             background-size: cover;
             background-repeat: no-repeat;
+            min-height: 100vh;
         }
 
         @include media-queries-max-width(medium-tablet) {
@@ -38,13 +40,24 @@
     &__h1, 
     &__h2 {
         flex-basis: 100%;
-        font-family: "Tangerine", cursive;
-        font-size: 10rem;
+        @include font-family("special");
         text-transform: none;
     }
 
+    &__h1 {
+        color: #853433;
+        font-size: 10rem;
+        margin-top: 15rem;
+
+        @include media-queries-max-width(medium-tablet) {
+            font-size: 7rem;
+            margin-top: 8rem;
+        }
+    }
+
     &__h2 {
-        color: $color-primary;
+        color: #C75187;
+        font-size: 8rem;
     }
 
     &__menu {
@@ -80,13 +93,13 @@
         @include flex-columns;
         justify-content: center;
         align-items: center;
-        gap: 2.5rem;
+        gap: 3rem;
 
         hr {
-            border-top: .8rem dotted $color-primary;
+            border-top: .8rem dotted #C75187;
             width: 5rem;
             text-align: center;
-            margin: 0 auto;
+            margin: 6px auto;
             color: $color-white;
             border-right: none;
             border-left: none;
@@ -96,7 +109,8 @@
     &__price,
     &__included {
         flex-basis: 100%;
-        font-size: 4rem;
+        font-size: 3rem;
+        color: #C75187;
     }
 
     &__prenota {
@@ -112,7 +126,7 @@
         @include flex-columns;
 
         figcaption {
-            color: $color-primary;
+            color: #C75187;
         }
     }
     
