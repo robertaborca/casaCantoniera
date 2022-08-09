@@ -8,6 +8,8 @@
 
     @include media-queries-max-width(medium-tablet) {
         padding: map-get($padding, small);
+        padding-left: 0;
+        padding-right: 0;
     }
 
     h1, h2 {
