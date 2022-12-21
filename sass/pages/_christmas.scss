@@ -20,16 +20,20 @@
 
         padding: map-get($padding, large);
 
-        background: url("#{$img-path}pasqua22_casa-cantoniera.webp");
+        
+        background: url("#{$img-path}natale-2022-alla-casa-cantoniera.png");
         background-size: cover;
         background-repeat: no-repeat;
 
         @include media-queries-max-width(medium-tablet) {
-            background-image: linear-gradient(to bottom, rgba(255,255,255,.6), rgba(255,255,255,.6)),
-            url("#{$img-path}pasqua22_casa-cantoniera--mobile.webp");
+            background: url("#{$img-path}natale-2022-alla-casa-cantoniera--mobile.png");
             background-size: cover;
             background-repeat: no-repeat;
             min-height: 100vh;
+
+            h1 {
+                background-color: rgba(0,0,0,.3);
+            }
         }
 
         @include media-queries-max-width(medium-tablet) {
@@ -45,7 +49,7 @@
     }
 
     &__h1 {
-        color: #853433;
+        color: #fff;
         font-size: 10rem;
         margin-top: 15rem;
 
@@ -56,7 +60,7 @@
     }
 
     &__h2 {
-        color: #C75187;
+        color: $color-primary;
         font-size: 8rem;
     }
 
@@ -96,7 +100,7 @@
         gap: 3rem;
 
         hr {
-            border-top: .8rem dotted #C75187;
+            border-top: .8rem dotted $color-primary;
             width: 5rem;
             text-align: center;
             margin: 6px auto;
@@ -110,7 +114,7 @@
     &__included {
         flex-basis: 100%;
         font-size: 3rem;
-        color: #C75187;
+        color: $color-primary;
     }
 
     &__prenota {
@@ -126,7 +130,7 @@
         @include flex-columns;
 
         figcaption {
-            color: #C75187;
+            color: $color-primary;
         }
     }
     
