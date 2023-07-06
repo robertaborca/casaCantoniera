@@ -218,7 +218,7 @@
     &__christmas {
         color: $color-secondary;
         padding-left: map-get($padding, large);
-        background: linear-gradient( rgba($color-secondary, 0.6), rgba($color-secondary, 0.6) ), url("#{$img-path}Cenone-Natale-Capodanno-Casa-Cantoniera-Pizzeria-Ristorante-Torino.webp");
+        background: linear-gradient( rgba($color-secondary, 0.6), rgba($color-secondary, 0.6) ), url("#{$img-path}menu-pasqua-2023-casa-cantoniera-ristorante-san-mauro.webp");
         background-size: cover;
         background-repeat: no-repeat;
         color: $color-white;
@@ -226,7 +226,7 @@
 
         // MEDIA RULES
         @include media-queries-max-width(small-desktop) {
-            background: linear-gradient( rgba($color-secondary, 0), rgba($color-secondary, 0) ), url("#{$img-path}pranzo-natale-2022-casa-cantoniera-pizzeria-ristorante-san-mauro-mobile.webp");
+            background: linear-gradient( rgba($color-secondary, 0), rgba($color-secondary, 0) ), url("#{$img-path}menu-pasqua-2023-casa-cantoniera-ristorante-san-mauro--mobile.webp");
             background-size: cover;
             background-repeat: no-repeat;
             color: $color-black;
