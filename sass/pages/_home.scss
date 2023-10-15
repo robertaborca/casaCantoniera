@@ -218,7 +218,7 @@
     &__christmas {
         color: $color-secondary;
         padding-left: map-get($padding, large);
-        background: linear-gradient( rgba($color-secondary, 0.6), rgba($color-secondary, 0.6) ), url("#{$img-path}menu-pasqua-2022-casa-cantoniera-ristorante-san-mauro.webp");
+        background: linear-gradient( rgba($color-secondary, 0.6), rgba($color-secondary, 0.6) ), url("#{$img-path}menu-pasqua-2023-casa-cantoniera-ristorante-san-mauro.webp");
         background-size: cover;
         background-repeat: no-repeat;
         color: $color-white;
@@ -226,7 +226,7 @@
 
         // MEDIA RULES
         @include media-queries-max-width(small-desktop) {
-            background: linear-gradient( rgba($color-secondary, 0), rgba($color-secondary, 0) ), url("#{$img-path}menu-pasqua-2022-casa-cantoniera-ristorante-san-mauro--mobile.webp");
+            background: linear-gradient( rgba($color-secondary, 0), rgba($color-secondary, 0) ), url("#{$img-path}menu-pasqua-2023-casa-cantoniera-ristorante-san-mauro--mobile.webp");
             background-size: cover;
             background-repeat: no-repeat;
             color: $color-black;
@@ -242,7 +242,7 @@
 
             @include media-queries-max-width(small-desktop) {
                 color: $color-black;
-                background-color: rgba(255,255,255,.4);
+                background-color: rgba(255,255,255,.7);
             }
             
         }
@@ -421,6 +421,13 @@
         // MAP LINK
         &--map {
             padding-right: map-get($padding, huge);
+        }
+
+        @include media-queries-max-width(small-desktop) {
+
+            &--christmas {
+                background-color: rgba(255,255,255,.9);
+            }
         }
         
     }

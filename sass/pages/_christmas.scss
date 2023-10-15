@@ -20,16 +20,20 @@
 
         padding: map-get($padding, large);
 
-        background: url("#{$img-path}pasqua22_casa-cantoniera.webp");
+        
+        background: url("#{$img-path}pasqua23_casa-cantoniera.webp");
         background-size: cover;
         background-repeat: no-repeat;
 
         @include media-queries-max-width(medium-tablet) {
-            background-image: linear-gradient(to bottom, rgba(255,255,255,.6), rgba(255,255,255,.6)),
-            url("#{$img-path}pasqua22_casa-cantoniera--mobile.webp");
+            background: url("#{$img-path}pasqua23_casa-cantoniera--mobile.webp");
             background-size: cover;
             background-repeat: no-repeat;
             min-height: 100vh;
+
+            h1 {
+                background-color: rgba(0,0,0,.3);
+            }
         }
 
         @include media-queries-max-width(medium-tablet) {
@@ -45,7 +49,7 @@
     }
 
     &__h1 {
-        color: #853433;
+        color: #9e4273;
         font-size: 10rem;
         margin-top: 15rem;
 
@@ -56,7 +60,7 @@
     }
 
     &__h2 {
-        color: #C75187;
+        color: #9e4273;
         font-size: 8rem;
     }
 
@@ -81,6 +85,7 @@
         @include flex-columns;
         justify-content: center;
         align-items: center;
+        flex-basis: 100%;
 
         img {
             object-fit: cover;
@@ -96,7 +101,7 @@
         gap: 3rem;
 
         hr {
-            border-top: .8rem dotted #C75187;
+            border-top: .8rem dotted #9e4273;
             width: 5rem;
             text-align: center;
             margin: 6px auto;
@@ -110,7 +115,7 @@
     &__included {
         flex-basis: 100%;
         font-size: 3rem;
-        color: #C75187;
+        color: #9e4273;
     }
 
     &__prenota {
@@ -126,7 +131,7 @@
         @include flex-columns;
 
         figcaption {
-            color: #C75187;
+            color: $color-primary;
         }
     }
     
